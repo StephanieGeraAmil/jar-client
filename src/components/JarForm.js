@@ -59,7 +59,7 @@ import {clearJarSelected,clearFormPurpose, settingFormPurposeToDistributePercent
 
   
     return (
-        <div className="form">
+        <div className="form"> 
           { validationMessage !="" &&
              <div className="alert-pop-up">
                 <span className="alert">{validationMessage}</span>

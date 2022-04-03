@@ -30,7 +30,7 @@ const App = () =>{
   useEffect(()=>{
     dispatch(getMovements());
     dispatch(getJars());
-     dispatch(getTransferences());
+    dispatch(getTransferences());
     },
    
     []);

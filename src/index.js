@@ -8,11 +8,7 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import reducers from './reducers/reducers.js'
 
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+import { BrowserRouter,Routes,Route} from "react-router-dom";
 
 const store= createStore(reducers, composeWithDevTools(applyMiddleware(thunk)))
 

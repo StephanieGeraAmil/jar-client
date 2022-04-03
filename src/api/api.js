@@ -1,7 +1,11 @@
 import axios from 'axios';
-//const backend_url="http://localhost:5500"
-const backend_url="https://money-jars-server.herokuapp.com"
+
+const { REACT_APP_BACKEND_URL } = process.env;
+
+const backend_url=REACT_APP_BACKEND_URL;
+
 const movements_url= backend_url+"/movements";
+
 export const fetchMovements=()=>axios.get(movements_url);
 export const createMovement=(newMovement)=> axios.post(movements_url, newMovement);
 export const updateMovement=(updatedMovement)=> axios.patch(`${movements_url}/${updatedMovement._id}`, updatedMovement);
