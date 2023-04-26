@@ -5,13 +5,15 @@ export default (jars=[], action)=>{
         return  [...jars, action.payload];
         
         case actions.UPDATE_JAR:
-        return jars.map((jar)=>jar._id===action.payload._id? action.payload: jar);
+        return jars.map((jar)=>jar.id===action.payload.id? action.payload: jar);
 
         case actions.DELETE_JAR:
-        return jars.filter((jar)=>jar._id!==action.payload);
+        return jars.filter((jar)=>jar.id!==action.payload);
 
         case actions.FETCH_ALL_JARS:
         return action.payload;
+        case actions.UPDATE_JAR_ARRAY:
+            return action.payload;
         
         default:
         return jars;

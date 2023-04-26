@@ -38,19 +38,19 @@ export const AvaiableOnJar = ({jar}) => {
         }
        );
      
-        transferences.map(item=>{
+        // transferences.map(item=>{
                 
-                 if(item.origin==jar._id){
-                    balance-=item.amount;
+        //          if(item.origin==jar._id){
+        //             balance-=item.amount;
                     
-                 }
-                 if(item.destination==jar._id){
-                      balance+=item.amount;
-                 }
+        //          }
+        //          if(item.destination==jar._id){
+        //               balance+=item.amount;
+        //          }
                 
                      
 
-            });
+        //     });
     setAmount(balance);
   
         }

@@ -1,5 +1,5 @@
 import * as actions from '../constants/actionTypes'
-export const movementSelected=(currentSelection)=>(dispatch)=>{
+export const setMovementSelected=(currentSelection)=>(dispatch)=>{
     try {
        
         const action={type: actions.SELECTED_MOVEMENT, payload:currentSelection};
@@ -19,7 +19,7 @@ export const clearMovementSelected=()=>(dispatch)=>{
         console.log(error);
     }
 }
-export const jarSelected=(currentSelection)=>(dispatch)=>{
+export const setJarSelected=(currentSelection)=>(dispatch)=>{
     try {
        
         const action={type: actions.SELECTED_JAR, payload:currentSelection};
@@ -41,10 +41,10 @@ export const clearJarSelected=()=>(dispatch)=>{
         console.log(error);
     }
 }
-export const settingFormPurposeToIncome=()=>(dispatch)=>{
+export const settingFormPurpose=(form)=>(dispatch)=>{
     try {
        
-        const action={type: actions.SETTING_FORM_FOR_INCOME};
+        const action={type: actions.SETTING_FORM_PURPOSE, payload:form};
        
         dispatch(action);
         
@@ -52,77 +52,88 @@ export const settingFormPurposeToIncome=()=>(dispatch)=>{
         console.log(error);
     }
 }
-export const settingFormPurposeToExpense=()=>(dispatch)=>{
-    try {
+// export const settingFormPurposeToIncome=()=>(dispatch)=>{
+//     try {
        
-        const action={type: actions.SETTING_FORM_FOR_EXPENSE};
+//         const action={type: actions.SETTING_FORM_FOR_INCOME};
+       
+//         dispatch(action);
         
-        dispatch(action);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// export const settingFormPurposeToExpense=()=>(dispatch)=>{
+//     try {
+       
+//         const action={type: actions.SETTING_FORM_FOR_EXPENSE};
         
-    } catch (error) {
-        console.log(error);
-    }
-}
-export const settingFormPurposeToAddJar=()=>(dispatch)=>{
-    try {
+//         dispatch(action);
+        
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// export const settingFormPurposeToAddJar=()=>(dispatch)=>{
+//     try {
 
         
-        const action={type: actions.SETTING_FORM_FOR_ADDING_JAR};
+//         const action={type: actions.SETTING_FORM_FOR_ADDING_JAR};
         
-        dispatch(action);
+//         dispatch(action);
         
-    } catch (error) {
-        console.log(error);
-    }
-}
-export const settingFormPurposeToEditMovement=()=>(dispatch)=>{
-    try {
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// export const settingFormPurposeToEditMovement=()=>(dispatch)=>{
+//     try {
        
-        const action={type: actions.SETTING_FORM_FOR_EDIT_MOVEMENT};
+//         const action={type: actions.SETTING_FORM_FOR_EDIT_MOVEMENT};
     
-        dispatch(action);
+//         dispatch(action);
         
-    } catch (error) {
-        console.log(error);
-    }
-}
-export const settingFormPurposeToEditJar=()=>(dispatch)=>{
-    try {
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// export const settingFormPurposeToEditJar=()=>(dispatch)=>{
+//     try {
       
-        const action={type: actions.SETTING_FORM_FOR_EDIT_JAR};
+//         const action={type: actions.SETTING_FORM_FOR_EDIT_JAR};
     
-        dispatch(action);
+//         dispatch(action);
         
-    } catch (error) {
-        console.log(error);
-    }
-}
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 
-export const settingFormPurposeToTransferMoneyToJar=()=>(dispatch)=>{
-    try {
+// export const settingFormPurposeToTransferMoneyToJar=()=>(dispatch)=>{
+//     try {
        
-        const action={type: actions.SETTING_FORM_FOR_TRANSER_MONEY};
+//         const action={type: actions.SETTING_FORM_FOR_TRANSER_MONEY};
     
-        dispatch(action);
+//         dispatch(action);
         
-    } catch (error) {
-        console.log(error);
-    }
+//     } catch (error) {
+//         console.log(error);
+//     }
 
-}
-export const settingFormPurposeToDistributePercentagesOfJars=()=>(dispatch)=>{
-    try {
+// }
+// export const settingFormPurposeToDistributePercentagesOfJars=()=>(dispatch)=>{
+//     try {
        
        
-        const action={type: actions.SETTING_FORM_FOR_DISTRIBUTE_PERCENTAGES};
+//         const action={type: actions.SETTING_FORM_FOR_DISTRIBUTE_PERCENTAGES};
     
-        dispatch(action);
+//         dispatch(action);
         
-    } catch (error) {
-        console.log(error);
-    }
-}
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 export const clearFormPurpose=()=>(dispatch)=>{
     try {

@@ -8,7 +8,7 @@ const Balance = () => {
         const movements = useSelector(selector);
         let sign=balance>0?'+':'-';
         useEffect(() => {
-            const reducer=(acc,item)=>acc+item.amount
+            const reducer=(acc,item)=>acc+parseFloat(item.amount)
             setBalance(movements.reduce(reducer,0))
             sign=balance>0?'+':'-';
         },[movements])

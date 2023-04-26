@@ -7,11 +7,11 @@ const Panel = () => {
     const dispatch= useDispatch();
 
     const addingIncome=()=>{
-        dispatch(actions.settingFormPurposeToIncome());
+        dispatch(actions.settingFormPurpose("Add Income"));
         dispatch(actions.clearMovementSelected());
     }
      const addingExpense=()=>{
-        dispatch(actions.settingFormPurposeToExpense());
+        dispatch(actions.settingFormPurpose("Add Expense"));
         dispatch(actions.clearMovementSelected());
     }
     return (

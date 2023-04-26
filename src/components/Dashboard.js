@@ -1,7 +1,7 @@
 import React  from 'react';
 import {useSelector, useDispatch } from 'react-redux';
 
-import { settingFormPurposeToAddJar, settingFormPurposeToDistributePercentagesOfJars, clearJarSelected} from '../actions/currentSelectionActions.js'
+import { settingFormPurpose, clearJarSelected} from '../actions/currentSelectionActions.js'
 
 
 import MovementsHistorySection from './MovementsHistorySection';
@@ -19,11 +19,11 @@ export const Dashboard = () => {
    
     const handleAddJar=()=>{
         dispatch(clearJarSelected());
-        dispatch(settingFormPurposeToAddJar());
+        dispatch(settingFormPurpose("Add Jar"));
     }
     const handleDistributePercentages=()=>{
         dispatch(clearJarSelected());
-        dispatch(settingFormPurposeToDistributePercentagesOfJars());
+        dispatch(settingFormPurpose( "Distribute Percentage"));
     }
     return (
         <div className="dashboard">

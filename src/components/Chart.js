@@ -11,7 +11,7 @@ export const DoughnutChart = () => {
     const jars = useSelector((state) =>(state.jars ? state.jars :null));
 
     const state = {
-        labels: jars.map(item=>item.name),
+        labels: jars?jars.map(item=>item.name):[],
         datasets: [
                 {
                 label: 'Jar Distribution',

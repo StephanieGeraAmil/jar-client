@@ -12,7 +12,7 @@
 
   .movement_column {
     width: 19%;
-    font-size: 4vw;
+    font-size: 1.8vh;
     padding: 2vw;
     font-weight: 100;
   }
@@ -28,12 +28,18 @@
       height: 3vw;
     }
   }
-  .movement_column_big {
+  .movement_column_jars {
     width: 38%;
-    font-size: 2.6vw;
+    font-size: 1.8vh;
     margin: 0;
     padding: 1vw;
     display: flexbox;
+    font-weight: 100;
+  }
+  .movement_column_concept {
+    width: 22%;
+    font-size: 1.8vh;
+    padding: 2vw;
     font-weight: 100;
   }
 }
@@ -45,18 +51,40 @@
 
     .movement_column {
       width: 15%;
-      font-size: 1.5vw;
+      font-size: 1.5vh;
       padding: 1vw;
     }
-    .movement_column_big {
+
+    .movement_column_jars {
       width: 60%;
-      font-size: 1vw;
+      font-size: 1.5vh;
       padding: 1vw;
+      overflow: hidden;
     }
+
+    .movement_column_concept {
+      font-size: 1.5vh;
+      padding: 1vw;
+      overflow: hidden;
+    }
+
     .movement_actions_container {
       .movement_actions {
         width: 1.5vw;
         height: 1.5vw;
+      }
+    }
+  }
+  @media (min-width: 1000px) {
+    .movement {
+      .movement_column {
+        font-size: 2vh;
+      }
+      .movement_column_jars {
+        font-size: 2vh;
+      }
+      .movement_column_concept {
+        font-size: 2vh;
       }
     }
   }

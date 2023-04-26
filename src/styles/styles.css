@@ -264,7 +264,7 @@
 
 .movement .movement_column {
   width: 19%;
-  font-size: 4vw;
+  font-size: 1.8vh;
   padding: 2vw;
   font-weight: 100;
 }
@@ -290,12 +290,19 @@
   height: 3vw;
 }
 
-.movement .movement_column_big {
+.movement .movement_column_jars {
   width: 38%;
-  font-size: 2.6vw;
+  font-size: 1.8vh;
   margin: 0;
   padding: 1vw;
   display: flexbox;
+  font-weight: 100;
+}
+
+.movement .movement_column_concept {
+  width: 22%;
+  font-size: 1.8vh;
+  padding: 2vw;
   font-weight: 100;
 }
 
@@ -306,17 +313,35 @@
   }
   .movement .movement_column {
     width: 15%;
-    font-size: 1.5vw;
+    font-size: 1.5vh;
     padding: 1vw;
   }
-  .movement .movement_column_big {
+  .movement .movement_column_jars {
     width: 60%;
-    font-size: 1vw;
+    font-size: 1.5vh;
     padding: 1vw;
+    overflow: hidden;
+  }
+  .movement .movement_column_concept {
+    font-size: 1.5vh;
+    padding: 1vw;
+    overflow: hidden;
   }
   .movement .movement_actions_container .movement_actions {
     width: 1.5vw;
     height: 1.5vw;
+  }
+}
+
+@media (min-width: 500px) and (min-width: 1000px) {
+  .movement .movement_column {
+    font-size: 2vh;
+  }
+  .movement .movement_column_jars {
+    font-size: 2vh;
+  }
+  .movement .movement_column_concept {
+    font-size: 2vh;
   }
 }
 
@@ -714,7 +739,6 @@ body .div_img {
   left: 8%;
   z-index: 20;
   width: 80%;
-  height: 58vw;
   padding: 3vw;
   border-radius: 2vw;
   background-color: #ffffff;
@@ -732,7 +756,7 @@ body .div_img {
       justify-content: space-around;
   -ms-flex-line-pack: center;
       align-content: center;
-  font-size: 4.5vw;
+  font-size: 2.5vh;
 }
 
 .alert-pop-up .alert {
@@ -741,7 +765,7 @@ body .div_img {
   padding: 3vw;
 }
 
-.alert-pop-up .close-alert {
+.close-alert {
   font-size: 3.5vw;
   border-width: 0.2vw;
   width: 4.1vw;
@@ -757,10 +781,6 @@ body .div_img {
   color: #5e0c0c;
 }
 
-.alert-pop-up-big {
-  height: 30vw;
-}
-
 @media (min-width: 500px) {
   .body {
     font-size: 2vw;
@@ -774,18 +794,11 @@ body .div_img {
     width: 40%;
     top: 28%;
     font-size: 1.5vw;
-    height: 10vw;
   }
-  .alert-pop-up .close-alert {
+  .close-alert {
     font-size: 1.5vw;
     width: 2vw;
     height: 2vw;
-  }
-  .alert-pop-up-big {
-    top: 30%;
-    left: 30%;
-    width: 34%;
-    height: 25vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */

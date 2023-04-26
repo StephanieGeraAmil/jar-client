@@ -1,7 +1,7 @@
 import React , {useEffect, useState} from 'react'
 import {useDispatch,useSelector} from 'react-redux';
 import { deleteMovement} from '../actions/MovementsActions.js'
-import { movementSelected, settingFormPurposeToEditMovement} from '../actions/currentSelectionActions.js'
+import { setMovementSelected, settingFormPurpose} from '../actions/currentSelectionActions.js'
 
  const Movement = ({movement}) => {
      const [style, setStyle] = useState({display:'none'});
@@ -12,17 +12,17 @@ import { movementSelected, settingFormPurposeToEditMovement} from '../actions/cu
     const sign=movement.amount>0?'+':'-'
 
     const edit=()=>{
-        dispatch(movementSelected(movement));
-        dispatch(settingFormPurposeToEditMovement());
+        dispatch(setMovementSelected(movement));
+        dispatch(settingFormPurpose("Edit Movement"));
      }
 
     return (
         <div className="movement" onMouseEnter={e=>setStyle({display:'flex'})} onMouseLeave={e=>setStyle({display:'none'})}  >
             
-            <h4 className="movement_column ">{movement.concept}</h4>
+            <h4 className="movement_column_concept ">{movement.concept}</h4>
             <h4 className="movement_column ">{sign}${Math.abs(movement.amount)}</h4>
           
-            <h4 className="movement_column_big">{movement.jar.reduce((acc,curr)=>curr.name+", "+acc  ,'').slice(0,-2)}</h4>
+            <h4 className="movement_column_jars">{movement.jar.reduce((acc,curr)=>curr.name+", "+acc  ,'').slice(0,-2)}</h4>
           
              <div className="movement_column movement_actions_container"style={style} >
                     <div  className="movement_actions div_img" style={{
@@ -32,7 +32,7 @@ import { movementSelected, settingFormPurposeToEditMovement} from '../actions/cu
                     <div  className="movement_actions div_img" style={{
                             backgroundImage: `url("/imgs/delete.png")`
                            
-                            }} onClick={()=>{dispatch(deleteMovement(movement._id));}}>
+                            }} onClick={()=>{dispatch(deleteMovement(movement.id));}}>
                             </div>
             </div>
           
