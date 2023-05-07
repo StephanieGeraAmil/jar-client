@@ -99,6 +99,7 @@ const LandingPage = () => {
       </div>
       <div className="caveats">
         <div className="eighty">
+          <h3 className="subTitle"> Some caveats for you to consider</h3>
           <p className="paragraph">
             If you have debt you need to pay it of assap, so if you are able to
             save more than 20% you definetly should.Save as much as you can! and
@@ -121,7 +122,9 @@ const LandingPage = () => {
       <div className="patience">
         <div className="middle">
           <div className="eighty">
-            <h1 className="smallerTitle">Not yet, is wisdom, not restriction</h1>
+            <h1 className="smallerTitle">
+              Not yet, is wisdom, not restriction
+            </h1>
             <p className="paragraph">
               You want lot's of things, and if you are smart you will probably
               be able to get them, but you will need to wait and practice a lot
