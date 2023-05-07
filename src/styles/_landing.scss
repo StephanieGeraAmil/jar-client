@@ -122,7 +122,7 @@ $weak-font-color: #757575;
   }
   .how {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: $secondary-color-landing;
@@ -136,10 +136,24 @@ $weak-font-color: #757575;
 
   .steps {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
+    .step {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+    }
+  }
+  .middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
   }
 
   .caveats {
@@ -153,15 +167,20 @@ $weak-font-color: #757575;
 
   .patience {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    .things {
-      width: 30vh;
-      height: 30vh;
-      margin: 0 auto;
-      object-fit: cover;
+    .listOfThings {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      .things {
+        width: 30vh;
+        height: 30vh;
+        margin: 0 auto;
+        object-fit: cover;
+      }
     }
   }
 
