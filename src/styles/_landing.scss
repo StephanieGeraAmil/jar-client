@@ -112,8 +112,14 @@ $weak-font-color: #757575;
   }
   .title {
     color: $primary-color-landing;
-    font-size: 4vh;
+    font-size: 8vh;
     font-weight: 700;
+    margin:0;
+  }  .smallerTitle {
+      color: $primary-color-landing;
+      font-size: 6vh;
+      font-weight: 700;
+      margin: 0;
   }
   .subTitle {
     color: $strong-font-color;
@@ -121,6 +127,7 @@ $weak-font-color: #757575;
     font-weight: 500;
   }
   .how {
+    padding:5vh 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -132,14 +139,22 @@ $weak-font-color: #757575;
       height: 50vh;
       z-index: 1;
     }
+    .rowflex {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .steps {
+    padding: 7vh 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
+    margin: auto;
     .step {
       display: flex;
       flex-direction: column;
@@ -155,8 +170,13 @@ $weak-font-color: #757575;
     align-items: center;
     width: 50%;
   }
+  .eighty {
+    width: 80%;
+    margin: auto;
+  }
 
   .caveats {
+    padding: 7vh 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,12 +186,15 @@ $weak-font-color: #757575;
   }
 
   .patience {
+    padding: 7vh 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
+    margin: auto;
     .listOfThings {
+      padding: 3vh;
       display: grid;
       grid-template-columns: repeat(2, auto);
       grid-template-rows: repeat(2, auto);
@@ -185,6 +208,7 @@ $weak-font-color: #757575;
   }
 
   .final {
+    padding: 7vh 0;
     display: flex;
     flex-direction: column;
     justify-content: center;

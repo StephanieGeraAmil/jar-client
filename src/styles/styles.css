@@ -144,8 +144,16 @@
 
 .landingPage .title {
   color: #f3bf14;
-  font-size: 4vh;
+  font-size: 8vh;
   font-weight: 700;
+  margin: 0;
+}
+
+.landingPage .smallerTitle {
+  color: #f3bf14;
+  font-size: 6vh;
+  font-weight: 700;
+  margin: 0;
 }
 
 .landingPage .subTitle {
@@ -155,6 +163,7 @@
 }
 
 .landingPage .how {
+  padding: 5vh 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,7 +187,7 @@
   z-index: 1;
 }
 
-.landingPage .steps {
+.landingPage .how .rowflex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,7 +201,25 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+}
+
+.landingPage .steps {
+  padding: 7vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: auto;
 }
 
 .landingPage .steps .step {
@@ -229,7 +256,13 @@
   width: 50%;
 }
 
+.landingPage .eighty {
+  width: 80%;
+  margin: auto;
+}
+
 .landingPage .caveats {
+  padding: 7vh 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,6 +281,7 @@
 }
 
 .landingPage .patience {
+  padding: 7vh 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,10 +295,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 80%;
+  margin: auto;
 }
 
 .landingPage .patience .listOfThings {
+  padding: 3vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[2];
@@ -282,6 +318,7 @@
 }
 
 .landingPage .final {
+  padding: 7vh 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -19,24 +19,28 @@ const LandingPage = () => {
         <LoginButton text="START NOW" />
       </div>
       <div className="how">
-        <div className="middle">
-          <h1 className="title">How it works?</h1>
-          <p className="paragraph">
-            Set aside an hour or so to discuss the budget with everyone involved
-            in your family finances
-          </p>
-          <p className="paragraph">
-            There are several rules to help you distribute the money, this tool
-            is meant to be adaptable to all of them, so you can choose the one
-            that best fit your current goals
-          </p>
-          <p className="paragraph">
-            The idea behind it is that you know where every dollar is going and
-            you make sure it goes to where is most needed
-          </p>
-        </div>
-        <div className="middle">
-          <img src="/imgs/budgeting.png" className="budgeting" />
+        <div className="eighty">
+          <div className="rowflex">
+            <div className="middle">
+              <h1 className="title">How it works?</h1>
+              <p className="paragraph">
+                Set aside an hour or so to discuss the budget with everyone
+                involved in your family finances
+              </p>
+              <p className="paragraph">
+                There are several rules to help you distribute the money, this
+                tool is meant to be adaptable to all of them, so you can choose
+                the one that best fit your current goals
+              </p>
+              <p className="paragraph">
+                The idea behind it is that you know where every dollar is going
+                and you make sure it goes to where is most needed
+              </p>
+            </div>
+            <div className="middle">
+              <img src="/imgs/budgeting.png" className="budgeting" />
+            </div>
+          </div>
         </div>
       </div>
       <div className="steps">
@@ -94,36 +98,40 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="caveats">
-        <p className="paragraph">
-          If you have debt you need to pay it of assap, so if you are able to
-          save more than 20% you definetly should.Save as much as you can! and
-          pay as much as you can!
-        </p>
-        <p className="paragraph">
-          Not all households can cover their necessities with the 50%, of their
-          income (and others can cover them with les than 20%), so it's
-          important that you adjust the percentages according to your unique
-          reality.
-        </p>
-        <p className="paragraph">
-          The more you save, the more you can invest more and you will reach
-          financial freedom faster, don't overspend just because you .That said
-          you must not eliminate the wants/fun category, otherwise, you wont
-          stick to the budget really long.
-        </p>
+        <div className="eighty">
+          <p className="paragraph">
+            If you have debt you need to pay it of assap, so if you are able to
+            save more than 20% you definetly should.Save as much as you can! and
+            pay as much as you can!
+          </p>
+          <p className="paragraph">
+            Not all households can cover their necessities with the 50%, of
+            their income (and others can cover them with les than 20%), so it's
+            important that you adjust the percentages according to your unique
+            reality.
+          </p>
+          <p className="paragraph">
+            The more you save, the more you can invest more and you will reach
+            financial freedom faster, don't overspend just because you .That
+            said you must not eliminate the wants/fun category, otherwise, you
+            wont stick to the budget really long.
+          </p>
+        </div>
       </div>
       <div className="patience">
         <div className="middle">
-          <h1 className="title">Not yet, is wisdom, not restriction</h1>
-          <p className="paragraph">
-            You want lot's of things, and if you are smart you will probably be
-            able to get them, but you will need to wait and practice a lot of
-            self control
-          </p>
-          <p className="paragraph">
-            It's just a matter of time, You will buy things once you can afford
-            them, so you wont waste any money, peace or freedom.
-          </p>
+          <div className="eighty">
+            <h1 className="smallerTitle">Not yet, is wisdom, not restriction</h1>
+            <p className="paragraph">
+              You want lot's of things, and if you are smart you will probably
+              be able to get them, but you will need to wait and practice a lot
+              of self control
+            </p>
+            <p className="paragraph">
+              It's just a matter of time, You will buy things once you can
+              afford them, so you wont waste any money, peace or freedom.
+            </p>
+          </div>
         </div>
         <div className="middle listOfThings">
           <img src="/imgs/house.png" className="things" />
@@ -133,12 +141,15 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="final">
-        <p className="paragraph">
-          After Paying off debt, you will be able to save money, invest it (put
-          the money to work for you) and have more control over your future.
-          You'll gain Peace and Freedom, What are you waiting for?
-        </p>
-        <LoginButton text="START NOW" />
+        <div className="middle">
+          <h1 className="smallerTitle"> YOU CAN DO IT!</h1>
+          <p className="paragraph">
+            After Paying off debt, you will be able to save money, invest it
+            (put the money to work for you) and have more control over your
+            future. You'll gain Peace and Freedom, What are you waiting for?
+          </p>
+          <LoginButton text="START NOW" />
+        </div>
       </div>
     </div>
   );
