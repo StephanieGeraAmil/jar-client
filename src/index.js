@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
+import LandingPage from "./components/LandingPage";
+import { Auth0Provider } from "@auth0/auth0-react";
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk'
@@ -17,11 +18,18 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
+          <Auth0Provider
+          domain="dev-7pl37pty.us.auth0.com"
+          clientId="vNXWfuyHWr4jF94dV51O4ZclSOpkA8Hw"
+          redirectUri={process.env.REACT_APP_REDIRECTION_URL}
+        >
          <Routes>
-              <Route path="/" element={<App />} />
+           <Route path="/" element={<LandingPage />} />
+              <Route path="/jars" element={<App />} />
            
               {/* <Route path="distribution" element={<JarManagement />} /> */}
           </Routes>
+           </Auth0Provider>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,

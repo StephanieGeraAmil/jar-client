@@ -8,8 +8,8 @@ import { settingFormPurpose } from "./actions/currentSelectionActions.js";
 import { Dashboard } from "./components/Dashboard";
 import MovementForm from "./components/MovementForm";
 import { NavigationBar } from "./components/NavigationBar";
-import { DistributionForm } from "./components/DistributionForm.js";
-import JarForm from "./components/JarForm.js";
+import { DistributionForm } from "./components/DistributionForm";
+import JarForm from "./components/JarForm";
 import Modal from "./components/Modal";
 import Backdrop from "./components/Backdrop";
 

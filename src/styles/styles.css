@@ -1,3 +1,290 @@
+.landingPage {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landingPage .topSection {
+  display: -ms-grid;
+  display: grid;
+  color: #757575;
+  -ms-grid-columns: (10vh)[14];
+      grid-template-columns: repeat(14, 10vh);
+  -ms-grid-rows: (10vh)[12];
+      grid-template-rows: repeat(12, 10vh);
+}
+
+.landingPage .topSection .family {
+  width: 70vh;
+  height: 70vh;
+  z-index: 1;
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 11;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 9;
+}
+
+.landingPage .topSection .blueCircle {
+  width: 70vh;
+  height: 70vh;
+  border-radius: 50%;
+  z-index: 0;
+  background-color: #dbe1e8;
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  grid-column-end: 13;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 11;
+}
+
+.landingPage .topSection .jar {
+  width: 25vh;
+  height: 30vh;
+  z-index: 2;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  -ms-grid-row: 7;
+      grid-row-start: 7;
+  grid-row-end: 9;
+}
+
+.landingPage .topSection .landingTopTitle {
+  -ms-grid-column: 6;
+      grid-column-start: 6;
+  grid-column-end: 12;
+  z-index: 2;
+  margin-top: -5vh;
+  margin-left: -2vh;
+  -ms-grid-row: 7;
+      grid-row-start: 7;
+  grid-row-end: 9;
+  font-size: 20vh;
+  font-weight: 700;
+  color: #f3bf14;
+}
+
+.landingPage .topSection .landingTopSubTitle {
+  -ms-grid-column: 6;
+      grid-column-start: 6;
+  grid-column-end: 14;
+  z-index: 2;
+  margin: 0;
+  margin-top: -1vh;
+  -ms-grid-row: 9;
+      grid-row-start: 9;
+  grid-row-end: 10;
+  font-size: 3.5vh;
+}
+
+.landingPage .topSection .landingTopPhrase {
+  -ms-grid-column: 6;
+      grid-column-start: 6;
+  grid-column-end: 12;
+  z-index: 2;
+  margin: 0;
+  margin-top: -5vh;
+  -ms-grid-row: 10;
+      grid-row-start: 10;
+  grid-row-end: 11;
+  font-size: 2.5vh;
+  font-weight: 100;
+}
+
+.landingPage .topSection .loginButton {
+  -ms-grid-column: 6;
+      grid-column-start: 6;
+  grid-column-end: 8;
+  -ms-grid-row: 11;
+      grid-row-start: 11;
+  grid-row-end: 12;
+  margin-top: -5vh;
+  font-size: 2vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  width: 20vh;
+  padding: 3vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0;
+  border: none;
+  background-color: #f3bf14;
+  color: #272727;
+  text-align: center;
+}
+
+.landingPage .paragraph {
+  color: #272727;
+  font-size: 2vh;
+  font-weight: 100;
+}
+
+.landingPage .title {
+  color: #f3bf14;
+  font-size: 4vh;
+  font-weight: 700;
+}
+
+.landingPage .subTitle {
+  color: #272727;
+  font-size: 2.5vh;
+  font-weight: 500;
+}
+
+.landingPage .how {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #dbe1e8;
+  width: 100%;
+}
+
+.landingPage .how .budgeting {
+  width: 50vh;
+  height: 50vh;
+  z-index: 1;
+}
+
+.landingPage .steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.landingPage .caveats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #dbe1e8;
+  width: 100%;
+}
+
+.landingPage .patience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.landingPage .patience .things {
+  width: 30vh;
+  height: 30vh;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.landingPage .final {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #dbe1e8;
+  width: 100%;
+}
+
+.landingPage .final .loginButton {
+  font-size: 2vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  width: 20vh;
+  padding: 3vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0;
+  border: none;
+  background-color: #f3bf14;
+  color: #272727;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .loginButton {
+    font-size: 1.5vw;
+    height: 2.5vw;
+  }
+}
+
 .dashboard {
   display: -ms-grid;
   display: grid;
@@ -799,6 +1086,10 @@ body .div_img {
     font-size: 1.5vw;
     width: 2vw;
     height: 2vw;
+  }
+  .submitButton {
+    font-size: 1.5vw;
+    height: 2.5vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */

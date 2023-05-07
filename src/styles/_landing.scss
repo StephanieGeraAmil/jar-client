@@ -1,0 +1,198 @@
+$font-landing: "Montserrat", sans-serif;
+$primary-color-landing: #f3bf14;
+
+$secondary-color-landing: #dbe1e8;
+$strong-font-color: #272727;
+$weak-font-color: #757575;
+
+.landingPage {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .topSection {
+    display: grid;
+    color: $weak-font-color;
+    grid-template-columns: repeat(14, 10vh);
+    grid-template-rows: repeat(12, 10vh);
+    .family {
+      width: 70vh;
+      height: 70vh;
+      z-index: 1;
+      grid-column-start: 4;
+      grid-column-end: 11;
+      grid-row-start: 2;
+      grid-row-end: 9;
+    }
+    .blueCircle {
+      width: 70vh;
+      height: 70vh;
+      border-radius: 50%;
+      z-index: 0;
+      background-color: $secondary-color-landing;
+      grid-column-start: 5;
+      grid-column-end: 13;
+      grid-row-start: 3;
+      grid-row-end: 11;
+    }
+    .jar {
+      width: 25vh;
+      height: 30vh;
+      z-index: 2;
+      grid-column-start: 3;
+      grid-column-end: 4;
+
+      grid-row-start: 7;
+      grid-row-end: 9;
+    }
+
+    .landingTopTitle {
+      grid-column-start: 6;
+      grid-column-end: 12;
+      z-index: 2;
+      margin-top: -5vh;
+      margin-left: -2vh;
+      grid-row-start: 7;
+      grid-row-end: 9;
+      font-size: 20vh;
+      font-weight: 700;
+      color: $primary-color-landing;
+    }
+    .landingTopSubTitle {
+      grid-column-start: 6;
+      grid-column-end: 14;
+      z-index: 2;
+      margin: 0;
+      margin-top: -1vh;
+      grid-row-start: 9;
+      grid-row-end: 10;
+      font-size: 3.5vh;
+    }
+    .landingTopPhrase {
+      grid-column-start: 6;
+      grid-column-end: 12;
+      z-index: 2;
+      margin: 0;
+      margin-top: -5vh;
+      grid-row-start: 10;
+      grid-row-end: 11;
+      font-size: 2.5vh;
+      font-weight: 100;
+    }
+    .loginButton {
+      grid-column-start: 6;
+      grid-column-end: 8;
+      grid-row-start: 11;
+      grid-row-end: 12;
+      margin-top: -5vh;
+      font-size: 2vh;
+      font-family: $font;
+      font-weight: normal;
+      width: 20vh;
+      padding: 3vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0;
+      border: none;
+      background-color: $primary-color-landing;
+      color: $strong-font-color;
+      text-align: center;
+    }
+  }
+
+  .paragraph {
+    color: $strong-font-color;
+    font-size: 2vh;
+    font-weight: 100;
+  }
+  .title {
+    color: $primary-color-landing;
+    font-size: 4vh;
+    font-weight: 700;
+  }
+  .subTitle {
+    color: $strong-font-color;
+    font-size: 2.5vh;
+    font-weight: 500;
+  }
+  .how {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color-landing;
+    width: 100%;
+    .budgeting {
+      width: 50vh;
+      height: 50vh;
+      z-index: 1;
+    }
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .caveats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color-landing;
+    width: 100%;
+  }
+
+  .patience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .things {
+      width: 30vh;
+      height: 30vh;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+  }
+
+  .final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color-landing;
+    width: 100%;
+    .loginButton {
+      font-size: 2vh;
+      font-family: $font;
+      font-weight: normal;
+      width: 20vh;
+      padding: 3vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0;
+      border: none;
+      background-color: $primary-color-landing;
+      color: $strong-font-color;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .loginButton {
+    font-size: 1.5vw;
+    height: 2.5vw;
+  }
+}

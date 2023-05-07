@@ -8,7 +8,7 @@ import {
   // settingFormPurposeToTransferMoneyToJar,
   // settingFormPurposeToDistributePercentagesOfJars,
 } from "../actions/currentSelectionActions.js";
-import { AvaiableOnJar } from "./AvaiableOnJar.js";
+import { AvaiableOnJar } from "./AvaiableOnJar";
 
 export const Jar = ({ jar }) => {
   const dispatch = useDispatch();
