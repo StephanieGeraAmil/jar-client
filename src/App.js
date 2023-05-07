@@ -26,7 +26,6 @@ const App = () => {
     dispatch(getJars());
   }, []);
   useEffect(() => {
-   console.log("jars have changed", jars);
     if (jars && jars.length > 0) {
       let reducer = (acc, item) => acc + parseFloat(item.percentage);
       if (jars.reduce(reducer, 0) !== 100) {
