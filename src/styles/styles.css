@@ -1,6 +1,6 @@
 .landingPage {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,105 +18,93 @@
 }
 
 .landingPage .topSection {
+  width: 100%;
+  height: 100%;
+  color: #757575;
   display: -ms-grid;
   display: grid;
-  color: #757575;
-  -ms-grid-columns: (10vh)[14];
-      grid-template-columns: repeat(14, 10vh);
-  -ms-grid-rows: (10vh)[12];
-      grid-template-rows: repeat(12, 10vh);
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: 10vh (1fr)[4] 10vh;
+      grid-template-rows: 10vh repeat(4, 1fr) 10vh;
+      grid-template-areas: ". . . . ." ". familyimg-start middle-start bluecircle-start ." ". familyimg-start middle-start bluecircle-start ." ". jar info info ." ". familyimg-end middle-end bluecircle-end .";
 }
 
 .landingPage .topSection .family {
   width: 70vh;
   height: 70vh;
   z-index: 1;
-  -ms-grid-column: 4;
-      grid-column-start: 4;
-  grid-column-end: 11;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  grid-row-end: 9;
+  grid-column: familyimg-start/middle-start;
+  grid-row: familyimg-start/familyimg-end;
 }
 
 .landingPage .topSection .blueCircle {
+  grid-column: middle-start/bluecircle-start;
+  grid-row: bluecircle-start/bluecircle-row;
   width: 70vh;
   height: 70vh;
   border-radius: 50%;
   z-index: 0;
   background-color: #dbe1e8;
-  -ms-grid-column: 5;
-      grid-column-start: 5;
-  grid-column-end: 13;
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  grid-row-end: 11;
 }
 
 .landingPage .topSection .jar {
-  width: 25vh;
+  width: 23vh;
   height: 30vh;
   z-index: 2;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: jar;
+}
+
+.landingPage .topSection .information {
+  height: 100px;
+  width: 78%;
+  -ms-grid-row: 4;
   -ms-grid-column: 3;
-      grid-column-start: 3;
-  grid-column-end: 4;
-  -ms-grid-row: 7;
-      grid-row-start: 7;
-  grid-row-end: 9;
+  -ms-grid-column-span: 2;
+  grid-area: info;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .landingPage .topSection .landingTopTitle {
-  -ms-grid-column: 6;
-      grid-column-start: 6;
-  grid-column-end: 12;
   z-index: 2;
-  margin-top: -5vh;
-  margin-left: -2vh;
-  -ms-grid-row: 7;
-      grid-row-start: 7;
-  grid-row-end: 9;
+  margin: 0;
   font-size: 20vh;
   font-weight: 700;
   color: #f3bf14;
 }
 
 .landingPage .topSection .landingTopSubTitle {
-  -ms-grid-column: 6;
-      grid-column-start: 6;
-  grid-column-end: 14;
   z-index: 2;
   margin: 0;
-  margin-top: -1vh;
-  -ms-grid-row: 9;
-      grid-row-start: 9;
-  grid-row-end: 10;
   font-size: 3.5vh;
 }
 
 .landingPage .topSection .landingTopPhrase {
-  -ms-grid-column: 6;
-      grid-column-start: 6;
-  grid-column-end: 12;
   z-index: 2;
   margin: 0;
-  margin-top: -5vh;
-  -ms-grid-row: 10;
-      grid-row-start: 10;
-  grid-row-end: 11;
   font-size: 2.5vh;
   font-weight: 100;
-  height: 6vh;
 }
 
 .landingPage .topSection .loginButton {
-  -ms-grid-column: 6;
-      grid-column-start: 6;
-  grid-column-end: 8;
-  -ms-grid-row: 11;
-      grid-row-start: 11;
-  grid-row-end: 12;
-  margin-top: -5vh;
+  margin-top: 1vw;
   font-size: 2vh;
+  max-height: 40px;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   width: 20vh;
@@ -188,38 +176,40 @@
   z-index: 1;
 }
 
-.landingPage .how .rowflex {
+.landingPage .how .howInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.landingPage .steps {
-  padding: 7vh 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 2vh;
+  width: 40%;
+}
+
+.landingPage .how .howInfo .paragraph {
+  margin: 5px;
+}
+
+.landingPage .steps {
+  padding: 7vh 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 2vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 80%;
   margin: auto;
 }
@@ -238,24 +228,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
 }
 
 .landingPage .middle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
 }
 
 .landingPage .eighty {
@@ -305,10 +293,11 @@
   padding: 3vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
   -ms-grid-rows: (auto)[2];
       grid-template-rows: repeat(2, auto);
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 2vh;
 }
 
 .landingPage .patience .listOfThings .things {
@@ -338,11 +327,16 @@
   width: 100%;
 }
 
+.landingPage .final .paragraph {
+  width: 80%;
+}
+
 .landingPage .final .loginButton {
   font-size: 2vh;
+  font-size: 1.5vw;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  width: 20vh;
+  width: auto;
   padding: 3vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,10 +354,123 @@
   text-align: center;
 }
 
-@media (min-width: 500px) {
-  .loginButton {
-    font-size: 1.5vw;
-    height: 2.5vw;
+@media (min-height: 650px) {
+  .landingPage .topSection {
+    -ms-grid-columns: minmax(2vh, 2vw) 30vw 30vw 30vw minmax(2vh, 2vh);
+        grid-template-columns: minmax(2vh, 2vw) 30vw 30vw 30vw minmax(2vh, 2vh);
+    -ms-grid-rows: 18vh (1fr)[4] 18vh;
+        grid-template-rows: 18vh repeat(4, 1fr) 18vh;
+        grid-template-areas: ". . . . ." ". familyimg-start familyimg-start . ." ". . bluecircle-start bluecircle-start ." ". jar info info ." ". familyimg-end bluecircle-end bluecircle-end .";
+  }
+  .landingPage .topSection .family {
+    width: 70vw;
+    height: 70vw;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    grid-row: familyimg-start/familyimg-end;
+  }
+  .landingPage .topSection .blueCircle {
+    width: 70vw;
+    height: 70vw;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    grid-row: bluecircle-start/bluecircle-end;
+  }
+  .landingPage .topSection .jar {
+    width: 23vw;
+    height: 30vw;
+  }
+  .landingPage .topSection .landingTopTitle {
+    font-size: 16vw;
+  }
+  .landingPage .topSection .landingTopSubTitle {
+    font-size: 2.8vw;
+  }
+  .landingPage .topSection .landingTopPhrase {
+    font-size: 1.8vw;
+  }
+  .landingPage .steps {
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .landingPage .middle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .landingPage .topSection {
+    margin-top: 5vh;
+    -ms-grid-columns: auto 80vw auto;
+        grid-template-columns: auto 80vw auto;
+    -ms-grid-rows: 10vw (1fr)[3] (auto)[2] 10vw;
+        grid-template-rows: 10vw repeat(3, 1fr) repeat(2, auto) 10vw;
+        grid-template-areas: ". familyimg-start ." ". bluecircle-start ." ". info ." ". jar ." ". familyimg-end ." ". bluecircle-end .";
+  }
+  .landingPage .topSection .family {
+    width: 70vw;
+    height: 70vw;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    grid-row: familyimg-start/familyimg-end;
+  }
+  .landingPage .topSection .blueCircle {
+    width: 70vw;
+    height: 70vw;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    grid-row: bluecircle-start/bluecircle-end;
+  }
+  .landingPage .topSection .jar {
+    margin-left: 65%;
+    margin-top: 20px;
+    width: 25vw;
+    height: 32vw;
+    z-index: 4;
+  }
+  .landingPage .topSection .landingTopTitle {
+    font-size: 20vw;
+  }
+  .landingPage .topSection .landingTopSubTitle {
+    font-size: 3.5vw;
+  }
+  .landingPage .topSection .landingTopPhrase {
+    font-size: 2vh;
+  }
+  .landingPage .middle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .landingPage .how .howInfo {
+    width: 80%;
+  }
+  .landingPage .how .budgeting {
+    margin-top: 3vw;
+    width: 50vw;
+    height: 50vw;
+  }
+  .landingPage .patience .listOfThings {
+    padding: 0;
+  }
+  .landingPage .patience .listOfThings .things {
+    width: 40vw;
+    height: 40vw;
+  }
+  .landingPage .patience .patienceInfo {
+    width: 80%;
+  }
+  .landingPage .smallerTitle {
+    font-size: 10vw;
+  }
+  .landingPage .final .loginButton {
+    font-size: 3vw;
   }
 }
 

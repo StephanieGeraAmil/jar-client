@@ -9,38 +9,37 @@ const LandingPage = () => {
         <img src="/imgs/familyHug.png" className="family" />
         <img className="blueCircle" />
         <img src="./jar.png" className="jar" />
-        <h1 className="landingTopTitle">Budget</h1>
-        <h2 className="landingTopSubTitle">LEARN HOW TO MANAGE YOUR MONEY</h2>
-        <p className="landingTopPhrase">
-          The first rule towards wealth is living beneath your means. Is easier
-          than you'll think
-        </p>
+        <div className="information">
+          <h1 className="landingTopTitle">Budget</h1>
+          <h2 className="landingTopSubTitle">LEARN HOW TO MANAGE YOUR MONEY</h2>
+          <p className="landingTopPhrase">
+            The first rule towards wealth is living beneath your means. Is
+            easier than you'll think
+          </p>
 
-        <LoginButton text="START NOW" />
+          <LoginButton text="START NOW" />
+        </div>
       </div>
       <div className="how">
-        <div className="eighty">
-          <div className="rowflex">
-            <div className="middle">
-              <h1 className="title">How it works?</h1>
-              <p className="paragraph">
-                Set aside an hour or so to discuss the budget with everyone
-                involved in your family finances
-              </p>
-              <p className="paragraph">
-                There are several rules to help you distribute the money, this
-                tool is meant to be adaptable to all of them, so you can choose
-                the one that best fit your current goals
-              </p>
-              <p className="paragraph">
-                The idea behind it is that you know where every dollar is going
-                and you make sure it goes to where is most needed
-              </p>
-            </div>
-            <div className="middle">
-              <img src="/imgs/budgeting.png" className="budgeting" />
-            </div>
+        <div className="middle">
+          {/* <div className="eighty"> */}
+          <div className="howInfo">
+            <h1 className="title">How it works?</h1>
+            <p className="paragraph">
+              Set aside an hour or so to discuss the budget with everyone
+              involved in your family finances
+            </p>
+            <p className="paragraph">
+              There are several rules to help you distribute the money, this
+              tool is meant to be adaptable to all of them, so you can choose
+              the one that best fit your current goals
+            </p>
+            <p className="paragraph">
+              The idea behind it is that you know where every dollar is going
+              and you make sure it goes to where is most needed
+            </p>
           </div>
+          <img src="/imgs/budgeting.png" className="budgeting" />
         </div>
       </div>
       <div className="steps">
@@ -121,7 +120,7 @@ const LandingPage = () => {
       </div>
       <div className="patience">
         <div className="middle">
-          <div className="eighty">
+          <div className="patienceInfo">
             <h1 className="smallerTitle">
               Not yet, is wisdom, not restriction
             </h1>
@@ -135,24 +134,23 @@ const LandingPage = () => {
               afford them, so you wont waste any money, peace or freedom.
             </p>
           </div>
-        </div>
-        <div className="middle listOfThings">
-          <img src="/imgs/house.png" className="things" />
-          <img src="/imgs/vacation.png" className="things" />
-          <img src="/imgs/car.png" className="things" />
-          <img src="/imgs/interior.png" className="things" />
+
+          <div className="middle listOfThings">
+            <img src="/imgs/house.png" className="things show" />
+            <img src="/imgs/vacation.png" className="things show" />
+            <img src="/imgs/car.png" className="things " />
+            <img src="/imgs/interior.png" className="things " />
+          </div>
         </div>
       </div>
       <div className="final">
-        <div className="middle">
-          <h1 className="smallerTitle"> YOU CAN DO IT!</h1>
-          <p className="paragraph">
-            After Paying off debt, you will be able to save money, invest it
-            (put the money to work for you) and have more control over your
-            future. You'll gain Peace and Freedom, What are you waiting for?
-          </p>
-          <LoginButton text="START NOW" />
-        </div>
+        <h1 className="smallerTitle"> YOU CAN DO IT!</h1>
+        <p className="paragraph">
+          After Paying off debt, you will be able to save money, invest it (put
+          the money to work for you) and have more control over your future.
+          You'll gain Peace and Freedom, What are you waiting for?
+        </p>
+        <LoginButton text="START NOW" />
       </div>
     </div>
   );
