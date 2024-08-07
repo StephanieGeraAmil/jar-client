@@ -120,7 +120,7 @@ const JarForm = () => {
           />
           <input
             type="submit"
-            value={jarSelected == null ? "Add Jar" : "Edit"}
+            value={jarSelected == null ? "Add Category" : "Edit"}
             className="submitButton"
           />
         </div>

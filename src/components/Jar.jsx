@@ -30,7 +30,7 @@ export const Jar = ({ jar }) => {
   };
   const edit = () => {
     dispatch(setJarSelected(jar));
-    dispatch(settingFormPurpose("Edit Jar"));
+    dispatch(settingFormPurpose("Edit Category"));
   };
 
   return (

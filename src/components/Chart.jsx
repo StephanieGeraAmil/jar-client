@@ -14,7 +14,7 @@ export const DoughnutChart = () => {
         labels: jars?jars.map(item=>item.name):[],
         datasets: [
                 {
-                label: 'Jar Distribution',
+                label: 'Distribution',
                 backgroundColor: [
                     '#35DEB2',
                     '#36606E',

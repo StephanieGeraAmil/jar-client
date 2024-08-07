@@ -19,7 +19,7 @@ export const Dashboard = () => {
    
     const handleAddJar=()=>{
         dispatch(clearJarSelected());
-        dispatch(settingFormPurpose("Add Jar"));
+        dispatch(settingFormPurpose("Add Category"));
     }
     const handleDistributePercentages=()=>{
         dispatch(clearJarSelected());

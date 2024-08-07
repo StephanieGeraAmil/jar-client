@@ -60,14 +60,14 @@ const App = () => {
                 <Modal form={<MovementForm />} />
               </React.Fragment>
             );
-          case "Edit Jar":
+          case "Edit Category":
             return (
               <React.Fragment>
                 <Backdrop />
                 <Modal form={<JarForm />} />
               </React.Fragment>
             );
-          case "Add Jar":
+          case "Add Category":
             return (
               <React.Fragment>
                 <Backdrop />

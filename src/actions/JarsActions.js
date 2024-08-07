@@ -42,12 +42,9 @@ export const deleteJar = (jar_id) => async (dispatch) => {
 export const updateArrayOfJars = (newArrayOfJars) => async (dispatch) => {
   try {
     const newJar = newArrayOfJars.filter((j) => !j.hasOwnProperty("id"));
-    console.log("newJar", newJar);
     let data = null;
     if (newJar.length > 0) {
-      console.log("I have a new jar ");
       data = await api.createJar(newJar[0]);
-      console.log("data", data);
     }
     newArrayOfJars
       .filter((j) => j.hasOwnProperty("id"))
@@ -61,7 +58,6 @@ export const updateArrayOfJars = (newArrayOfJars) => async (dispatch) => {
     } else {
       updatedArray = newArrayOfJars.filter((j) => j.hasOwnProperty("id"));
     }
-    console.log("updatedArray", updatedArray);
     const action = { type: actions.UPDATE_JAR_ARRAY, payload: updatedArray };
     dispatch(action);
   } catch (error) {

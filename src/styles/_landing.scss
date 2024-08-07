@@ -1,8 +1,38 @@
 $font-landing: "Montserrat", sans-serif;
 $primary-color-landing: #f3bf14;
 $secondary-color-landing: #dbe1e8;
-$strong-font-color: #272727;
+$strong-font-color: #000;
+$hover-color: #e0a60a;
+$font-on-hover-color: #fff;
+// #272727
 $weak-font-color: #757575;
+$font-size: 1.2vw;
+$subtitle-font-size: 1.8vw;
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the value for the desired floating effect */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: $font-landing;
+  font-size: $font-size;
+  font-weight: 300;
+  background-color: #fff;
+  color: $strong-font-color;
+}
 
 .landingPage {
   width: 100%;
@@ -13,21 +43,24 @@ $weak-font-color: #757575;
   justify-content: space-between;
   align-items: center;
   .topSection {
+    box-shadow: inset 4px -4px 15px rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100%;
+    padding: 2rem;
     color: $weak-font-color;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 10vh repeat(4, 1fr) 10vh;
+    grid-template-rows: 1vw repeat(4, 1fr) 0.4vw;
     grid-template-areas:
       ". . . . ."
-      ". familyimg-start middle-start bluecircle-start ."
-      ". familyimg-start middle-start bluecircle-start ."
-      ". jar info info ."
-      ". familyimg-end middle-end bluecircle-end .";
+      ". familyimg-start familyimg-start . ."
+      ". bluecircle-start bluecircle-start . ."
+      ". familyimg-end jar info info"
+      ". . . bluecircle-end bluecircle-end ";
+
     .family {
-      width: 70vh;
-      height: 70vh;
+      width: 60vw;
+      height: 60vw;
       z-index: 1;
       grid-column: familyimg-start/middle-start;
       grid-row: familyimg-start/familyimg-end;
@@ -35,17 +68,19 @@ $weak-font-color: #757575;
     .blueCircle {
       grid-column: middle-start/bluecircle-start;
       grid-row: bluecircle-start/bluecircle-row;
-      width: 70vh;
-      height: 70vh;
+      overflow-x: hidden;
+      width: 60vw;
+      height: 60vw;
       border-radius: 50%;
       z-index: 0;
       background-color: $secondary-color-landing;
     }
     .jar {
-      width: 23vh;
-      height: 30vh;
+      width: 18vw;
+      height: 25vw;
       z-index: 2;
       grid-area: jar;
+      animation: float 3s ease-in-out infinite;
     }
     .information {
       height: 100px;
@@ -59,30 +94,33 @@ $weak-font-color: #757575;
     }
     .landingTopTitle {
       z-index: 2;
-      margin: 0;
-      font-size: 20vh;
+      margin: 0 0 18px 0;
+      font-size: 10vw;
+      line-height: 9vw;
       font-weight: 700;
       color: $primary-color-landing;
     }
     .landingTopSubTitle {
       z-index: 2;
       margin: 0;
-      font-size: 3.5vh;
+      font-size: $subtitle-font-size;
     }
     .landingTopPhrase {
       z-index: 2;
       margin: 0;
-      font-size: 2.5vh;
-      font-weight: 100;
+      font-weight: 300;
+      font-size: $subtitle-font-size;
+      color: $strong-font-color;
     }
     .loginButton {
       margin-top: 1vw;
-      font-size: 2vh;
-      max-height: 40px;
+      font-size: 1.5vw;
+      max-height: 4vw;
+      width: 15vw;
       font-family: $font;
-      font-weight: normal;
-      width: 20vh;
-      padding: 3vh;
+      font-weight: 300;
+    
+      padding: 1vw;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -91,38 +129,52 @@ $weak-font-color: #757575;
       background-color: $primary-color-landing;
       color: $strong-font-color;
       text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      &:hover {
+        background-color: $hover-color;
+        color: $font-on-hover-color;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+      }
     }
   }
   .paragraph {
     color: $strong-font-color;
-    font-size: 2vh;
-    font-weight: 100;
+    font-size: $font-size;
+    font-weight: 300;
   }
   .title {
     color: $primary-color-landing;
-    font-size: 8vh;
+    font-size: 6vw;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .darktitle {
+    color: $strong-font-color;
+    font-size: 4.5vw;
     font-weight: 700;
     margin: 0;
   }
   .smallerTitle {
     color: $primary-color-landing;
-    font-size: 6vh;
+    font-size: 4vw;
     font-weight: 700;
     margin: 0;
   }
   .subTitle {
     color: $strong-font-color;
-    font-size: 2.5vh;
-    font-weight: 500;
+    font-size: $subtitle-font-size;
+    font-weight: 600;
   }
   .how {
     padding: 5vh 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     background-color: $secondary-color-landing;
     width: 100%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     .budgeting {
       width: 50vh;
       height: 50vh;
@@ -131,9 +183,10 @@ $weak-font-color: #757575;
     .howInfo {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-start;
-      width: 40%;
+      width: 80%;
+      margin: auto;
       .paragraph {
         margin: 5px;
       }
@@ -146,13 +199,11 @@ $weak-font-color: #757575;
     grid-gap: 2vh;
     justify-content: center;
     align-items: flex-start;
-    width: 80%;
     margin: auto;
     .step {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      font-size: $font-size;
     }
   }
   .middle {
@@ -166,13 +217,29 @@ $weak-font-color: #757575;
     margin: auto;
   }
   .caveats {
+ 
     padding: 7vh 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $secondary-color-landing;
-    width: 100%;
+    width: 50%;
+    font-size: $font-size;
+    .styledList {
+      padding: 0;
+      margin: 0;
+      font-size: $font-size;
+      .listItem {
+        font-weight: 300;
+        font-size: $font-size;
+        margin-bottom: 20px;
+        .listTitle {
+          font-weight: 500;
+          font-size: 1.3em;
+          color: #757575;
+        }
+      }
+    }
   }
   .patience {
     padding: 7vh 0;
@@ -204,15 +271,17 @@ $weak-font-color: #757575;
     align-items: center;
     background-color: $secondary-color-landing;
     width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     .paragraph {
-      width: 80%;
+      width: 50%;
+      font-size: $font-size;
     }
     .loginButton {
-      font-size: 2vh;
       font-size: 1.5vw;
       font-family: $font;
-      font-weight: normal;
-      width: auto;
+      font-weight: 300;
+      max-height: 4vw;
+      width: 15vw;
       padding: 3vh;
       display: flex;
       justify-content: center;
@@ -222,111 +291,116 @@ $weak-font-color: #757575;
       background-color: $primary-color-landing;
       color: $strong-font-color;
       text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      &:hover {
+        background-color: $hover-color;
+        color: $font-on-hover-color;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+      }
     }
   }
 }
 
-@media (min-height: 650px) {
+@media (max-width: 1000px) {
+  .steps {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px;
+    .step {
+      min-width: 45%;
+      // max-width: 600px;
+    }
+    .paragraph {
+      font-size: 2vw;
+    }
+  }
+  .caveats {
+    width: 80% !important;
+    font-size: 2.4vw !important;
+    .styledList {
+      .listItem {
+        font-size: 2.2vw !important;
+        .listTitle {
+          font-size: 2.4vw !important;
+        }
+      }
+    }
+  }
   .landingPage {
-    .topSection {
-      grid-template-columns: minmax(2vh,2vw) 30vw 30vw 30vw minmax(2vh,2vh);
-      grid-template-rows: 18vh repeat(4, 1fr) 18vh;
-      grid-template-areas:
-        ". . . . ."
-        ". familyimg-start familyimg-start . ."
-        ". . bluecircle-start bluecircle-start ."
-        ". jar info info ."
-        ". familyimg-end bluecircle-end bluecircle-end .";
-      .family {
-        width: 70vw;
-        height: 70vw;
-        grid-column: 2/3;
-        grid-row: familyimg-start/familyimg-end;
-      }
-      .blueCircle {
-        width: 70vw;
-        height: 70vw;
-        grid-column: 3/4;
-        grid-row: bluecircle-start/bluecircle-end;
-      }
-      .jar {
-        width: 23vw;
-        height: 30vw;
-      }
-      .landingTopTitle {
-        font-size: 16vw;
-      }
-      .landingTopSubTitle {
-        font-size: 2.8vw;
-      }
-      .landingTopPhrase {
-        font-size: 1.8vw;
-      }
+    .darktitle {
+      font-size: 5vw !important;
     }
-    .steps{
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .landingTopPhrase {
+      font-size: 2.2vw !important;
     }
-         .middle {
-           flex-direction: column;
-         }
-              
+  }
+  .smallerTitle {
+    font-size: 3.5vw !important;
+  }
+  .final {
+    .paragraph {
+      font-size: 2.2vw !important;
+    }
+  }
+
+  .subTitle {
+    font-size: 3vw !important;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .landingPage {
     .topSection {
-      margin-top: 5vh;
-      grid-template-columns: auto 80vw auto;
-      grid-template-rows: 10vw repeat(3, 1fr) repeat(2, auto) 10vw;
-      grid-template-areas:
-        ". familyimg-start ."
-        ". bluecircle-start ."
-        ". info ."
-        ". jar ."
-        ". familyimg-end ."
-        ". bluecircle-end .";
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 0 15px;
 
       .family {
-        width: 70vw;
-        height: 70vw;
-        grid-column: 2;
-        grid-row: familyimg-start/familyimg-end;
+        width: 150vw;
+        height: 150vw;
+        margin-left: -25%;
+        margin-top: -30%;
+        overflow: hidden;
+        object-fit: cover;
       }
 
       .blueCircle {
-        width: 70vw;
-        height: 70vw;
-        grid-column: 2;
-        grid-row: bluecircle-start/bluecircle-end;
+        display: none;
       }
 
       .jar {
-        margin-left: 65%;
-        margin-top: 20px;
-        // width: 23vw;
-        // height: 30vw;
-              width: 25vw;
-                height: 32vw;
+        margin-left: 55%;
+        margin-top: 38vw;
+        width: 40vw;
+        height: 50vw;
         z-index: 4;
       }
 
       .landingTopTitle {
-        font-size: 20vw;
+        font-size: 22vw;
+        line-height: 20vw;
+        margin-bottom: 15px;
       }
 
       .landingTopSubTitle {
-        font-size: 3.5vw;
+        font-size: 4vw;
+        margin-bottom: 5px;
       }
 
       .landingTopPhrase {
-        font-size: 2vh;
+        font-size: 3.5vw;
+        margin-bottom: 5px;
       }
     }
 
     .middle {
       flex-direction: column;
     }
-
+    .darktitle {
+      font-size: 9vw;
+    }
     .how {
       .howInfo {
         width: 80%;
@@ -338,7 +412,34 @@ $weak-font-color: #757575;
         height: 50vw;
       }
     }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      .step {
+        .title {
+          font-size: 12vw;
+        }
+      }
+    }
 
+    .subTitle {
+      font-size: 4vw;
+    }
+    .paragraph {
+      font-size: 3.5vw;
+    }
+    .caveats {
+      width: 80%;
+      font-size: 3.5vw;
+      .styledList {
+        .listItem {
+          font-size: 3.5vw;
+          .listTitle {
+            font-size: 3.8vw;
+          }
+        }
+      }
+    }
     .patience {
       .listOfThings {
         padding: 0;
@@ -353,15 +454,17 @@ $weak-font-color: #757575;
         width: 80%;
       }
     }
-         .smallerTitle {
-    
-           font-size: 10vw;
-    
-         }
-    .final{
-       
+    .smallerTitle {
+      font-size: 10vw;
+    }
+    .final {
       .loginButton {
-          font-size: 3vw;}
+        font-size: 3vw;
+      }
+      .paragraph {
+        width: 80%;
+        font-size: 3.5vw;
+      }
     }
   }
 }

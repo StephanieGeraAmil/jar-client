@@ -40,14 +40,11 @@ export const updateMovement=(updatedMovement)=>async(dispatch,getState)=>{
         if(isNaN(valueOfAmount))valueOfAmount=0;
         const movement={...updatedMovement, amount:valueOfAmount}
       
-        // const before = getState()
-        // console.log(' before dispatch: ', before)
         await api.updateMovement(movement);
     
         const action={type: actions.UPDATE_MOVEMENT, payload:movement};
         dispatch(action);
-        // const after = getState()
-        // console.log(' after dispatch: ', after)
+ 
         
     } catch (error) {
         console.log(error);
