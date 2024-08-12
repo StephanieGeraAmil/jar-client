@@ -14,20 +14,19 @@ import { BrowserRouter,Routes,Route} from "react-router-dom";
 const store= createStore(reducers, composeWithDevTools(applyMiddleware(thunk)))
 
 
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
           <Auth0Provider
-          domain="dev-7pl37pty.us.auth0.com"
-          clientId="vNXWfuyHWr4jF94dV51O4ZclSOpkA8Hw"
-          redirectUri={process.env.REACT_APP_REDIRECTION_URL}
+          domain= {process.env.REACT_APP_AUTH0_DOMAIN}
+          clientId= {process.env.REACT_APP_AUTH0_CLIENT_ID}
+          redirectUri={window.location.origin}
         >
          <Routes>
            <Route path="/" element={<LandingPage />} />
               <Route path="/jars" element={<App />} />
-           
-              {/* <Route path="distribution" element={<JarManagement />} /> */}
           </Routes>
            </Auth0Provider>
       </Provider>
