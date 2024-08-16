@@ -36,6 +36,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <NavigationBar />
       <Dashboard />
       {(() => {
         switch (formToBeDisplayed) {
@@ -86,7 +87,7 @@ const App = () => {
             return null;
         }
       })()}
-      {/* <NavigationBar/> */}
+
     </div>
   );
 };
