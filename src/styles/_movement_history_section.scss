@@ -1,21 +1,37 @@
 .movement_history {
-  width: $insideContainerSize;
+  // width: $insideContainerSize;
+  height: 100%;
+  width: 85%;
+  overflow: scroll;
+  border-radius:20px;
+ 
   margin: auto;
   display: flex;
   flex-direction: column;
+  margin-top: 2em;
+  // grid-area: b; 
   ul {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style-type: none;
+    li:nth-child(even) .movement {
+      background-color: $even-background-color; // Define this variable or use a fixed color
+     
+    }
+  
+    li:nth-child(odd) .movement {
+      background-color: $odd-background-color; // Define this variable or use a fixed color
+    }
   }
 }
 
 @media (min-width: 750px) {
   .movement_history {
-    width: 85%;
-    margin-top: 7vw;
-    align-self: start;
-    grid-area: b;
+
+    width: 45%;
+    margin-top: 2vw;
+    // align-self: start;
+    // grid-area: b;
   }
 }

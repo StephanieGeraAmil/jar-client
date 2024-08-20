@@ -12,6 +12,7 @@ import { DistributionForm } from "./components/DistributionForm";
 import JarForm from "./components/JarForm";
 import Modal from "./components/Modal";
 import Backdrop from "./components/Backdrop";
+import { DoughnutChart } from "./components/Chart";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -82,6 +83,13 @@ const App = () => {
                 <Modal form={<DistributionForm />} />
               </React.Fragment>
             );
+            case "Show Chart":
+              return (
+                <React.Fragment>
+                  <Backdrop />
+                  <Modal form={<DoughnutChart />} />
+                </React.Fragment>
+              );
 
           default:
             return null;

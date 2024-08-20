@@ -4,6 +4,11 @@
   // left: 0;
   // width: 100%;
   margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // background-color: blue;
   // background-color: #e5e5e5;
   .validation_message {
     color: red;
@@ -13,14 +18,20 @@
   }
 
   form {
-    width: 80%;
-    margin: auto;
-    margin-top: 5vw;
-    margin-bottom: 2vw;
+    // background-color: yellow;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
+    justify-content: space-between;
+    width: 80%;
+
+    margin: auto;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    display: flex;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    // align-content: center;
 
     .form-group {
       display: flex;
@@ -99,6 +110,10 @@
 
 @media (min-width: 750px) {
   .form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .validation_message {
       margin-left: 10%;
       font-size: 1.5vw;
@@ -106,7 +121,9 @@
     form {
       margin-top: 2vw;
       margin-bottom: 2vw;
-
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       .form-group {
         font-size: 1.5vw;
         .form-control {

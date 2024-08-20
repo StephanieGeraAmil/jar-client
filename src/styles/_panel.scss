@@ -1,17 +1,17 @@
 .panel {
-  grid-column: 1;
-  grid-row: 1;
+  // grid-column: 1;
+  // grid-row: 1;
 
-  width: 80%;
-  margin: auto;
-
+  // width: 80%;
+  // margin: auto;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-bottom: $standardMargin * 1.5;
-  margin-top: $standardMargin * 1.5;
+  margin-bottom: $standardMargin ;
+  margin-top: $standardMargin ;
   .wallet_section {
-    width: 45%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -20,16 +20,19 @@
   }
 }
 
+
 @media (min-width: 750px) {
   .panel {
-    width: 70%;
-    margin: auto;
-    margin-top: 7vw;
-    grid-area: a;
-    margin-bottom: 5vw;
+    width: 90%;
+    // margin: auto;
+    margin-top: 2vw;
+    margin-bottom: 0;
+    // grid-area: a;
+    // margin-bottom: 5vw;
     .wallet_section {
-      width: 35%;
+      // width: 35%;
       padding-right: 0;
     }
   }
 }
+
