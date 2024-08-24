@@ -19,8 +19,8 @@ export const NavigationBar = () => {
     }, [isAuthenticated]);
     useEffect(() => {
         if (userOnState) {
-            dispatch(getMovements(user));
-            dispatch(getJars(user));
+            dispatch(getMovements(userOnState));
+            dispatch(getJars(userOnState));
         }
     }, [userOnState]);
     return (

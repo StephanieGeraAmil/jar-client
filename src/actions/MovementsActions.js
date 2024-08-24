@@ -7,8 +7,7 @@ import * as actions from '../constants/actionTypes';
 export const getMovements = (usr)=>async(dispatch)=>{
     try {
         const {data}= await api.fetchMovements(usr._id);
-      
-        const action={type: actions.FETCH_ALL_MOVEMENTS, payload:data.message};
+        const action={type: actions.FETCH_ALL_MOVEMENTS, payload:data};
         dispatch(action);
     } catch (error) {
         console.log(error);

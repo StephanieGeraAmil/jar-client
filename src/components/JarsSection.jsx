@@ -9,7 +9,7 @@ const JarsSection = () => {
     return (
         <>
             <div className="jarGrid">
-                {jars&&jars.map((item) => (
+                {jars&&jars?.map((item) => (
                             <Jar key={item.id} jar={item} />
                         )
                     )}

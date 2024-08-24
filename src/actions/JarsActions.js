@@ -4,7 +4,7 @@ import * as api from "../api/api.js";
 export const getJars = (usr) => async (dispatch, getState) => {
   try {
     const { data } = await api.fetchJars(usr._id);
-    const action = { type: actions.FETCH_ALL_JARS, payload: data.message };
+    const action = { type: actions.FETCH_ALL_JARS, payload: data};
     dispatch(action);
   } catch (error) {
     console.log(error);
@@ -41,15 +41,11 @@ export const deleteJar = (jar_id) => async (dispatch) => {
 
 export const updateArrayOfJars = (newArrayOfJars) => async (dispatch) => {
   try {
-    console.log("newArrayOfJars",newArrayOfJars);
     const newJar = newArrayOfJars.filter((j) => !j.hasOwnProperty("id"));
-    console.log("newJar",newJar);
     let data = null;
     if (newJar.length > 0) {
       data = await api.createJar(newJar[0]);
-      console.log(data);
     }
-    console.log("not new jar")
     newArrayOfJars
       .filter((j) => j.hasOwnProperty("id"))
       .map(async (jar) => await api.updateJar(jar));

@@ -8,7 +8,7 @@ const MovementsHistorySection = () => {
     return (
         <div className="movement_history">
            <ul>
-                {movements&&movements.map((item) =>  (
+                {movements&&movements?.map((item) =>  (
                         <li key={item.id}>
                             <Movement key={item.id} movement={item} />
                         </li>

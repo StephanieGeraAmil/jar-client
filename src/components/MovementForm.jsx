@@ -82,7 +82,6 @@ const MovementForm = () => {
             ...movementData,
             amount: -Math.abs(movementData.amount),
           });
-        console.log(movementData);
         dispatch(movementActions.createMovement(movementData));
         setMovementData({ ...movementData, concept: "", amount: "", jar: [] });
         dispatch(selectionActions.clearFormPurpose());
