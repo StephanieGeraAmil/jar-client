@@ -22,10 +22,7 @@ const App = () => {
       ? state.currentSelection.formPurpose
       : null;
   const formToBeDisplayed = useSelector(selectorFormPurpose);
-  useEffect(() => {
-    dispatch(getMovements());
-    dispatch(getJars());
-  }, []);
+
   useEffect(() => {
     if (jars && jars.length > 0) {
       let reducer = (acc, item) => acc + parseFloat(item.percentage);

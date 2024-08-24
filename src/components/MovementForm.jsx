@@ -9,7 +9,7 @@ const MovementForm = () => {
   const dispatch = useDispatch();
 
   const jars = useSelector((state) => (state.jars ? state.jars : null));
-
+  const user = useSelector((state) => (state.currentSelection.user ? state.currentSelection.user : null));
   const selectorMovementSelected = (state) =>
     state.currentSelection.movement ? state.currentSelection.movement : null;
   const movementSelected = useSelector(selectorMovementSelected);
@@ -142,6 +142,7 @@ const MovementForm = () => {
               setMovementData({
                 ...movementData,
                 concept: e.target.value.toUpperCase(),
+                creator: user?._id 
               })
             }
           />

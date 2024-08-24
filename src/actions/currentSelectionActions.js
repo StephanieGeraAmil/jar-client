@@ -1,4 +1,5 @@
 import * as actions from '../constants/actionTypes'
+import * as api from "../api/api.js";
 export const setMovementSelected=(currentSelection)=>(dispatch)=>{
     try {
        
@@ -55,8 +56,29 @@ export const settingFormPurpose=(form)=>(dispatch)=>{
 
 export const clearFormPurpose=()=>(dispatch)=>{
     try {
-    
         const action={type: actions.CLEAR_FORM_PURPOSE};
+        dispatch(action);
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const settingUser=(usr) => async (dispatch)=>{
+    try {       
+        const { data } = await api.fetchUser(usr.email);
+        const action={type: actions.SETTING_USER, payload:data.message};  
+        dispatch(action);
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const clearUser=()=>(dispatch)=>{
+    try {
+    
+        const action={type: actions.CLEAR_USER};
         dispatch(action);
         
     } catch (error) {

@@ -19,6 +19,8 @@ const JarForm = () => {
   const dispatch = useDispatch();
 
   const jars = useSelector((state) => (state.jars ? state.jars : null));
+
+  const user = useSelector((state) => (state.currentSelection.user ? state.currentSelection.user : null));
   const jarSelected = useSelector((state) =>
     state.currentSelection.jar ? state.currentSelection.jar : null
   );
@@ -29,6 +31,7 @@ const JarForm = () => {
         percentage: jarSelected.percentage,
 
         name: jarSelected.name,
+    //    creator:jarSelected.creator?jarSelected.creator:null,
       });
     } 
   }, [jarSelected]);
@@ -86,7 +89,7 @@ const JarForm = () => {
             className="form-control"
             value={jarData.name}
             onChange={(e) =>
-              setJarData({ ...jarData, name: e.target.value.toUpperCase() })
+              setJarData({ ...jarData, name: e.target.value.toUpperCase(), creator: user?._id })
             }
           />
         </div>

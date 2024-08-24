@@ -31,6 +31,11 @@ export const UNSELECTED_JAR="selected/unselected_jar";
 // export const SETTING_FORM_FOR_DISTRIBUTE_PERCENTAGES="selected/setting_form_purpose_to_distribute_percentages";
 export const SETTING_FORM_PURPOSE="selected/setting_form_purpose";
 export const CLEAR_FORM_PURPOSE="selected/clear_form_purpose";
+export const SETTING_USER="selected/setting_user";
+export const CLEAR_USER="selected/clear_user";
+
+export const CREATE_USER="user/create_user";
+export const FETCH_USER= "user/fetch_user";
 
 
 

@@ -4,9 +4,10 @@ import * as actions from '../constants/actionTypes';
 
 
 //action creators
-export const getMovements = ()=>async(dispatch)=>{
+export const getMovements = (usr)=>async(dispatch)=>{
     try {
-        const {data}= await api.fetchMovements();
+        const {data}= await api.fetchMovements(usr._id);
+      
         const action={type: actions.FETCH_ALL_MOVEMENTS, payload:data.message};
         dispatch(action);
     } catch (error) {

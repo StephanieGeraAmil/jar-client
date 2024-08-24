@@ -21,6 +21,8 @@ export const DistributionForm = () => {
       setValidationMessage(" All the Percentages shoud Add up to 100%");
     } else {
       setValidationMessage("");
+      console.log("submit on ditribution");
+     console.log(changedJars)
       dispatch(updateArrayOfJars(changedJars));
         dispatch(clearJarSelected());
       dispatch(clearFormPurpose());
@@ -36,6 +38,7 @@ export const DistributionForm = () => {
       changedJars.map((j) =>
         jar.name == j.name ? { ...j, percentage: e.target.value } : j
       )
+     
     );
   };
   useEffect(() => {
