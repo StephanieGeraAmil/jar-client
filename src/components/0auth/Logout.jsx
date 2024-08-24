@@ -3,7 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 // import { LogoutOutlined } from "@mui/icons-material";
 // import { IconButton } from "@mui/material/";
 //import { StyledLink } from "../shared_styles/styled_buttons";
-const { REDIRECT_URI } = process.env;
+const REDIRECT_URI = process.env.REACT_APP_REDIRECTION_URL || window.location.origin;
 export const Logout = () => {
   const { logout } = useAuth0();
   return (
@@ -12,7 +12,7 @@ export const Logout = () => {
       // <IconButton
       aria-label="logout"
       onClick={(e) => {
-        logout({ returnTo: window.location.origin });
+        logout({ returnTo: REDIRECT_URI });
       }}
     >
       Logout
