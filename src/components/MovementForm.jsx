@@ -27,6 +27,8 @@ const MovementForm = () => {
     id: "",
   });
   const [validationMessage, setValidationMessage] = useState("");
+  const [isNegative, setIsNegative] = useState(actionBeingPerformed === "Add Expense");
+
 
   useEffect(() => {
     if (movementSelected != null) {
@@ -49,45 +51,83 @@ const MovementForm = () => {
     }
   }, [movementSelected]);
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   //  if(actionBeingPerformed=="Add Expense" && movementData.amount>0){
+  //   //     setValidationMessage("Expenses should be < 0");
+  //   //  }else
+  //   if (
+  //     actionBeingPerformed == "Add Income" &&
+  //     movementData.jar.length != jars.length
+  //   ) {
+  //     setValidationMessage("Incomes should be applied to all jars");
+  //   } else if (
+  //     actionBeingPerformed == "Edit Movement" &&
+  //     movementData.amount > 0 &&
+  //     movementData.jar.length != jars.length
+  //   ) {
+  //     setValidationMessage("Incomes should be applied to all jars");
+  //   } else {
+  //     if (movementSelected) {
+  //       dispatch(
+  //         movementActions.updateMovement({
+  //           id: movementSelected.id,
+  //           ...movementData,
+  //         })
+  //       );
+  //       dispatch(selectionActions.clearMovementSelected());
+  //       dispatch(selectionActions.clearFormPurpose());
+  //     } else {
+  //       if (actionBeingPerformed == "Add Expense")
+  //         setMovementData({
+  //           ...movementData,
+  //           amount: -Math.abs(movementData.amount),
+  //         });
+  //       dispatch(movementActions.createMovement(movementData));
+  //       setMovementData({ ...movementData, concept: "", amount: "", jar: [] });
+  //       dispatch(selectionActions.clearFormPurpose());
+  //     }
+  //   }
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    //  if(actionBeingPerformed=="Add Expense" && movementData.amount>0){
-    //     setValidationMessage("Expenses should be < 0");
-    //  }else
     if (
-      actionBeingPerformed == "Add Income" &&
-      movementData.jar.length != jars.length
+      actionBeingPerformed === "Add Income" &&
+      movementData.jar.length !== jars.length
     ) {
       setValidationMessage("Incomes should be applied to all jars");
     } else if (
-      actionBeingPerformed == "Edit Movement" &&
-      movementData.amount > 0 &&
-      movementData.jar.length != jars.length
+      actionBeingPerformed === "Edit Movement" &&
+      !isNegative &&
+      movementData.jar.length !== jars.length
     ) {
       setValidationMessage("Incomes should be applied to all jars");
     } else {
+      let mvData = { ...movementData };
+  
+      // Adjust the amount if it's an expense
+      if (actionBeingPerformed === "Add Expense") {
+        mvData.amount = -Math.abs(movementData.amount);
+      }
+  
       if (movementSelected) {
         dispatch(
           movementActions.updateMovement({
             id: movementSelected.id,
-            ...movementData,
+            ...mvData,
           })
         );
         dispatch(selectionActions.clearMovementSelected());
-        dispatch(selectionActions.clearFormPurpose());
       } else {
-        if (actionBeingPerformed == "Add Expense")
-          setMovementData({
-            ...movementData,
-            amount: -Math.abs(movementData.amount),
-          });
-        dispatch(movementActions.createMovement(movementData));
-        setMovementData({ ...movementData, concept: "", amount: "", jar: [] });
-        dispatch(selectionActions.clearFormPurpose());
+        dispatch(movementActions.createMovement(mvData));
       }
+  
+      setMovementData({ ...movementData, concept: "", amount: "", jar: [] });
+      dispatch(selectionActions.clearFormPurpose());
     }
   };
+  
   const handleCheck = (e) => {
     let updatedList = [...movementData.jar];
 
@@ -104,12 +144,44 @@ const MovementForm = () => {
       });
     }
   };
-  const signCheck = (e) => {
-    if (!isNaN(e.target.value)) {
-      setMovementData({ ...movementData, amount: e.target.value });
-    } else {
-      setMovementData({ ...movementData, amount: 0 });
+  // const signCheck = (e) => {
+  //   // let value = e.target.value;
+  //   // const amountRegex = /^\d*\.?\d{0,2}$/;
+
+  //   // if (amountRegex.test(value) || value === "") {
+  //   //   setMovementData({ ...movementData, amount: value });
+  //   // }
+  //   let value = e.target.value;
+
+
+  //   value = value.replace(/[^0-9.]/g, "");
+
+  //   const parts = value.split(".");
+  //   if (parts.length > 2) {
+  //     value = parts[0] + "." + parts.slice(1).join(""); 
+  //   }
+
+
+  //   if (parts[1] && parts[1].length > 2) {
+  //     value = parts[0] + "." + parts[1].substring(0, 2);
+  //   }
+
+  //   setMovementData({ ...movementData, amount: value });
+  // };
+  const handleAmountChange = (e) => {
+    let value = e.target.value;
+    value = value.replace(/[^0-9.]/g, "");
+
+    const parts = value.split(".");
+    if (parts.length > 2) {
+      value = parts[0] + "." + parts.slice(1).join("");
     }
+
+    if (parts[1] && parts[1].length > 2) {
+      value = parts[0] + "." + parts[1].substring(0, 2);
+    }
+
+    setMovementData({ ...movementData, amount: value });
   };
 
   return (
@@ -119,7 +191,7 @@ const MovementForm = () => {
           <span className="alert">{validationMessage}</span>
 
           <div
-            className="div_img close-alert"  
+            className="div_img close-alert"
             style={{
               backgroundImage: `url("/imgs/delete.png")`,
             }}
@@ -141,26 +213,32 @@ const MovementForm = () => {
               setMovementData({
                 ...movementData,
                 concept: e.target.value.toUpperCase(),
-                creator: user?._id 
+                creator: user?._id
               })
             }
           />
         </div>
+        {/* <div className="form-group">
+          <label className="m-2">Amount: </label>
+          <input
+             type="text"
+             className="form-control"
+             value={
+               actionBeingPerformed === "Add Expense"
+                 ? `-${Math.abs(movementData.amount || "")}`
+                 : movementData.amount || ""
+             }
+             onChange={signCheck}
+          />
+        </div> */}
         <div className="form-group">
           <label className="m-2">Amount: </label>
           <input
-            type="text"
+            type="number"
+            step="0.01"
             className="form-control"
-            value={
-              movementData.amount
-                ? actionBeingPerformed == "Add Expense"
-                  ? -Math.abs(movementData.amount)
-                  : movementData.amount
-                : ""
-            }
-            onChange={(e) => {
-              signCheck(e);
-            }}
+            value={movementData.amount}
+            onChange={(e) => handleAmountChange(e)}
           />
         </div>
         <div className="form-group">
