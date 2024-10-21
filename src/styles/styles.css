@@ -43,7 +43,10 @@ body {
   grid-template-rows: 1fr 1rf;
   grid-template-areas: "familyimg-start familyimg-start .  " "familyimg-end jar info ";
 }
-.landingPage .topSection .familyimg-start, .landingPage .topSection .familyimg-end, .landingPage .topSection .jar, .landingPage .topSection .info {
+.landingPage .topSection .familyimg-start,
+.landingPage .topSection .familyimg-end,
+.landingPage .topSection .jar,
+.landingPage .topSection .info {
   height: 100%; /* Ensure grid items respect their row height */
   overflow: hidden; /* Prevent content from pushing the rows */
 }
@@ -330,42 +333,61 @@ body {
 @media (max-width: 600px) {
   .landingPage .topSection {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding: 0 15px;
+    height: 100vh;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 95vw 50vh;
+    grid-template-areas: "familyimg-start" "info ";
   }
   .landingPage .topSection .family {
-    width: 150vw;
-    height: 150vw;
-    margin-left: -25%;
-    margin-top: -30%;
-    overflow: hidden;
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 130vw;
+    z-index: 1;
+    overflow-x: hidden;
   }
-  .landingPage .topSection .blueCircle {
-    display: none;
+  .landingPage .topSection .familyimg {
+    width: 150%;
+    height: auto;
+    border-radius: 0;
+    overflow: hidden;
+    margin: -25% 0 0 -20%;
   }
   .landingPage .topSection .jar {
-    margin-left: 55%;
-    margin-top: 38vw;
-    width: 40vw;
-    height: 50vw;
-    z-index: 4;
+    display: none;
   }
   .landingPage .topSection .landingTopTitle {
-    font-size: 22vw;
-    line-height: 20vw;
-    margin-bottom: 15px;
+    margin: 0;
+    padding: 0;
+    font-size: 23vw;
+    line-height: 22vw;
+    font-weight: 1000;
   }
   .landingPage .topSection .landingTopSubTitle {
-    font-size: 4vw;
-    margin-bottom: 5px;
+    font-size: 6vw;
+    margin-bottom: 1vh;
+  }
+  .landingPage .topSection .grayArea {
+    padding: 5vw;
   }
   .landingPage .topSection .landingTopPhrase {
-    font-size: 3.5vw;
+    font-size: 4vw !important;
     margin-bottom: 5px;
+  }
+  .landingPage .topSection .loginButton {
+    margin-top: 1vh;
+    font-size: 4vw;
+    max-height: 9vw;
+    padding: 5vw;
+    width: 40%;
+  }
+  .landingPage .topSection .final .loginButton {
+    margin-top: 1vh;
+    font-size: 4vw;
+    max-height: 9vw;
+    padding: 5vw;
+    width: 50vw !important;
   }
   .landingPage .middle {
     flex-direction: column;
@@ -416,9 +438,6 @@ body {
   }
   .landingPage .smallerTitle {
     font-size: 10vw;
-  }
-  .landingPage .final .loginButton {
-    font-size: 3vw;
   }
   .landingPage .final .paragraph {
     width: 80%;
