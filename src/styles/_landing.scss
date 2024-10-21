@@ -43,62 +43,126 @@ body {
   justify-content: space-between;
   align-items: center;
   .topSection {
-    box-shadow: inset 4px -4px 15px rgba(0, 0, 0, 0.3);
+    // box-shadow: inset 4px -4px 15px rgba(0, 0, 0, 0.3);
     width: 100%;
-    height: 100%;
-    padding: 2rem;
+    height: 125vh;
+    
+    padding: 5vh 15vw 0 15vw;
+    margin-bottom: 2vh;;
     color: $weak-font-color;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1vw repeat(4, 1fr) 0.4vw;
+    grid-template-columns: 1fr 2fr 4fr;
+    grid-template-rows: 1fr 1rf;
+    // grid-template-areas:
+    //   ". . . . ."
+    //   ". familyimg-start familyimg-start . ."
+    //   ". bluecircle-start bluecircle-start . ."
+    //   ". familyimg-end jar info info"
+    //   ". . . bluecircle-end bluecircle-end ";
     grid-template-areas:
-      ". . . . ."
-      ". familyimg-start familyimg-start . ."
-      ". bluecircle-start bluecircle-start . ."
-      ". familyimg-end jar info info"
-      ". . . bluecircle-end bluecircle-end ";
-
+    "familyimg-start familyimg-start .  "
+    "familyimg-end jar info ";
+    
+  
+    .familyimg-start, .familyimg-end, .jar, .info {
+      height: 100%; /* Ensure grid items respect their row height */
+      overflow: hidden; /* Prevent content from pushing the rows */
+  }
     .family {
-      width: 60vw;
-      height: 60vw;
+   
+      width: 100%;
+      height: 100%;
+      max-width: 50vw;
+      max-height: 50vw;
       z-index: 1;
       grid-column: familyimg-start/middle-start;
       grid-row: familyimg-start/familyimg-end;
     }
-    .blueCircle {
-      grid-column: middle-start/bluecircle-start;
-      grid-row: bluecircle-start/bluecircle-row;
-      overflow-x: hidden;
-      width: 60vw;
-      height: 60vw;
+    .familyimg {
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
-      z-index: 0;
-      background-color: $secondary-color-landing;
+   
+      
     }
+    // .blueCirclediv {
+    //   grid-column: middle-start/bluecircle-start;
+    //   grid-row: bluecircle-start/bluecircle-row;
+    //   overflow-x: hidden;
+    //   width: 60vw;
+    //   height: 60vw;
+    //   border-radius: 50%;
+    //   z-index: 0;
+    //   background-color: $secondary-color-landing;
+    // }
+    // .blueCircle {
+    //   width: 100%;
+    //   height: 100%;
+    //   border-radius: 50%;
+   
+      
+    // }
+
     .jar {
-      width: 18vw;
-      height: 25vw;
+      // width: 18vw;
+      // height: 25vw;
+      width: 100%;
+      height: auto;
       z-index: 2;
       grid-area: jar;
       animation: float 3s ease-in-out infinite;
+      justify-self: center;  /* Centers the item horizontally within the column */
+      align-self: flex-end;
+      margin-bottom: 12vh;
     }
-    .information {
-      height: 100px;
-      width: 78%;
+    // .information {
+    //   height: 100px;
+    //   width: 78%;
+    //   grid-area: info;
+    //   z-index: 3;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: flex-start;
+    //   align-items: flex-start;
+     
+    // }
+    .landingTitleSection{
+      // height: 70%;
+      max-height:65vh;
+      width: 100%;
       grid-area: info;
       z-index: 3;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+      align-self: flex-end;
+      margin-bottom: 4vh;
+      // justify-content: flex-end;
+      // align-items: flex-end;
+    
+      // padding: 5vh 0;
     }
+    // .grayArea{
+    //   height: 100%;
+    //   max-height:65vh;
+    //   width: 100%;
+    //   ;
+    //   z-index: 3;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: flex-start;
+    //   align-items: flex-start;
+    //   border-radius: 20%;
+    //   background-color: $secondary-color-landing;
+    //   padding: 5vh;
+    // }
     .landingTopTitle {
       z-index: 2;
-      margin: 0 0 18px 0;
+      margin: 0 0 5vh 0;
       font-size: 10vw;
       line-height: 9vw;
       font-weight: 700;
       color: $primary-color-landing;
+      text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
     }
     .landingTopSubTitle {
       z-index: 2;
@@ -118,7 +182,7 @@ body {
       max-height: 4vw;
       width: 15vw;
       font-family: $font;
-      font-weight: 300;
+      font-weight: 500;
     
       padding: 1vw;
       display: flex;
@@ -149,6 +213,7 @@ body {
     font-size: 6vw;
     font-weight: 700;
     margin: 0;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
   }
 
   .darktitle {
@@ -156,25 +221,28 @@ body {
     font-size: 4.5vw;
     font-weight: 700;
     margin: 0;
+
   }
   .smallerTitle {
     color: $primary-color-landing;
     font-size: 4vw;
     font-weight: 700;
     margin: 0;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
   }
   .subTitle {
     color: $strong-font-color;
     font-size: $subtitle-font-size;
     font-weight: 600;
+    
   }
   .how {
-    padding: 5vh 0;
+    padding: 5vw 0;
     display: flex;
     flex-direction: row;
     background-color: $secondary-color-landing;
     width: 100%;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    // box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     .budgeting {
       width: 50vh;
       height: 50vh;
@@ -185,7 +253,7 @@ body {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      width: 80%;
+      width: 90%;
       margin: auto;
       .paragraph {
         margin: 5px;
@@ -223,7 +291,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 70%;
     font-size: $font-size;
     .styledList {
       padding: 0;
@@ -279,7 +347,7 @@ body {
     .loginButton {
       font-size: 1.5vw;
       font-family: $font;
-      font-weight: 300;
+      font-weight: 500;
       max-height: 4vw;
       width: 15vw;
       padding: 3vh;

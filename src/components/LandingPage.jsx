@@ -6,17 +6,26 @@ const LandingPage = () => {
   return (
     <div className="landingPage">
       <div className="topSection">
-        <img src="/imgs/familyHug.png" className="family" />
-        <img className="blueCircle" />
+        <div className="family">
+        <img src="/imgs/familyHug.png"  className="familyimg" />
+        </div>
        
-        <div className="information">
+        {/* <div className="blueCirclediv">
+        <div className="blueCircle" ></div>
+        </div> */}
+        
+       
+        <div className="landingTitleSection">
           <h1 className="landingTopTitle">Budget Buddy</h1>
+        
+          <div  className="grayArea">
           <h2 className="landingTopSubTitle">LEARN HOW TO MANAGE YOUR MONEY</h2>
           <p className="landingTopPhrase">
             The first step towards wealth is living below your means. It's easier than you think!
           </p>
 
           <LoginButton text="START NOW" />
+          </div>
         </div>
         <img src="./jar.png" className="jar" />
       </div>
@@ -83,31 +92,31 @@ const LandingPage = () => {
       <li className="listItem">
         <span className="listTitle">Pay Off Debt ASAP</span>
         <div className="listContent">
-          Prioritize debt repayment. Save and pay off as much as possible to achieve financial freedom faster.
+        Prioritizing debt repayment is one of the most important steps toward financial freedom. The longer you carry debt, the more interest accumulates, increasing the overall amount you owe. By paying off as much debt as you can, as early as possible, you reduce the amount of interest you'll pay over time, which can save you significant money. It also frees up more of your income for savings and investments. Consider making extra payments when possible or focusing on high-interest debt first to minimize long-term costs. The sooner you're free of debt, the sooner you'll feel the relief and flexibility to make other financial decisions.
         </div>
       </li>
       <li className="listItem">
         <span className="listTitle">Adjust for Your Needs</span>
         <div className="listContent">
-          Adapt the 50% rule for necessities according to your household's reality. Some may need more, others less.
+        The standard 50-30-20 budget rule suggests allocating 50% of your income to necessities, 30% to discretionary spending, and 20% to savings and debt repayment. However, everyone's financial situation is different. Your cost of living, family size, and location might require a higher or lower percentage for necessities like housing, groceries, and transportation. The key is to adapt the rule to reflect your reality, ensuring you're meeting your basic needs without neglecting savings or fun. Regularly review your budget and make adjustments as circumstances change, such as when you move, get a raise, or face unexpected expenses.
         </div>
       </li>
       <li className="listItem">
         <span className="listTitle">Save and Invest</span>
         <div className="listContent">
-          The more you save, the more you can invest, bringing you closer to financial freedom.
+        Saving is essential for building a financial cushion, but investing allows your money to grow over time, bringing you closer to financial independence. The more you can set aside for investments, the more you can take advantage of compound interest, where your earnings generate even more returns. Start by building an emergency fund for unexpected expenses, then explore different investment options like retirement accounts, stocks, bonds, or real estate. Educating yourself on investment strategies can help you make informed decisions, giving you the confidence to grow your wealth steadily.
         </div>
       </li>
       <li className="listItem">
         <span className="listTitle">Balance Fun and Responsibility</span>
         <div className="listContent">
-          Keep a budget for wants to maintain balance and avoid feeling restricted.
+        While it’s important to save and focus on financial goals, it’s equally essential to set aside a budget for "wants"—things that bring you joy or relaxation. By allocating a reasonable portion of your income to leisure and entertainment, you can avoid burnout and resentment that comes from feeling too restricted. Finding this balance helps maintain motivation for long-term financial goals. Whether it’s a small treat, a vacation, or a hobby, enjoy your money responsibly, knowing it’s part of a healthy financial plan.
         </div>
       </li>
       <li className="listItem">
         <span className="listTitle">Practice Patience and Self-Control</span>
         <div className="listContent">
-          Achieving your financial goals takes time and discipline. You'll afford things without compromising your peace or freedom.
+        Financial success is a marathon, not a sprint. It’s natural to want things immediately, but exercising patience and self-control can help you avoid impulse purchases or decisions that could derail your financial progress. Set clear goals and remind yourself that sacrifices today will pay off in the future. By delaying gratification, you’ll be able to afford bigger and more meaningful purchases without going into debt or compromising your financial freedom. This long-term perspective not only helps you reach your goals but also gives you peace of mind knowing you’re on a solid path to success.
         </div>
       </li>
     </ul>
