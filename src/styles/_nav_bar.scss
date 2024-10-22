@@ -1,33 +1,45 @@
 .navigation_bar {
-  height: 2.5em;
+  height: 2em;
   width: 90%;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   gap: 2em;
-  padding: 1.6em 0;
+  padding: 1em 0;
   align-items: center;
-  color: $base-color!important;
+  color: $base-color !important;
   font-weight: 100 !important;
-
+  @media (max-width: 750px) {
+    height: 3vw;
+    font-size: 3vw;
+    padding: 2em 0;
+    justify-content: space-between;
+   
+  }
 
   .nav_icon {
     width: 0.8em;
     height: 0.8em;
   }
   .simple_label {
-    font-size: 0.8em;
+    font-size: 1vw;
     font-weight: 100;
+    @media (max-width: 750px) {
+      font-size: 3vw;
+    }
   }
   .login_logout_buttons {
-    font-size: 0.8em;
+    font-size: 1.2vw;
     border: none;
-    padding: 0.8em;
+    padding: 0.4em;
     border-radius: 10px;
     color: $base-color;
     background-color: rgb(153, 189, 200);
-    color: $base-color!important;
+    color: $base-color !important;
     font-weight: 100 !important;
+    @media (max-width: 750px) {
+      font-size: 4vw;
+    }
   }
 }

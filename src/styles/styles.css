@@ -498,7 +498,7 @@ body {
   }
   .dashboard .leftColumn .management_actions {
     width: 85%;
-    margin: auto;
+    margin: 0 auto;
   }
   .dashboard .leftColumn .management_actions .action {
     width: 2.5vw;
@@ -666,25 +666,24 @@ body {
 
 @media (min-width: 750px) {
   .movement {
-    padding: 0.5em;
-    font-size: 1.5vw;
+    padding: 0.1em;
   }
   .movement .movement_column {
     width: 15%;
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
   .movement .movement_column_jars {
     width: 60%;
-    font-size: 1.5vw;
+    font-size: 1vw;
     overflow: hidden;
   }
   .movement .movement_column_concept {
     overflow: hidden;
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
   .movement .movement_actions_container .movement_actions {
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 1vw;
+    height: 1vw;
   }
 }
 .jarGrid {
@@ -698,14 +697,14 @@ body {
   grid-column-gap: 2vw;
   justify-items: center;
   align-items: center;
-  margin-bottom: 16vw;
+  margin-bottom: 4vw;
   margin-top: 6vw;
 }
 
 @media (min-width: 750px) {
   .jarGrid {
     width: 65%;
-    margin: 2.5em 0;
+    margin: 2em 0 1em 0;
     grid-row-gap: 2vw;
     grid-column-gap: 1vw;
   }
@@ -940,35 +939,53 @@ body {
   }
 }
 .navigation_bar {
-  height: 2.5em;
+  height: 2em;
   width: 90%;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   gap: 2em;
-  padding: 1.6em 0;
+  padding: 1em 0;
   align-items: center;
   color: #073b4c !important;
   font-weight: 100 !important;
+}
+@media (max-width: 750px) {
+  .navigation_bar {
+    height: 3vw;
+    font-size: 3vw;
+    padding: 2em 0;
+    justify-content: space-between;
+  }
 }
 .navigation_bar .nav_icon {
   width: 0.8em;
   height: 0.8em;
 }
 .navigation_bar .simple_label {
-  font-size: 0.8em;
+  font-size: 1vw;
   font-weight: 100;
 }
+@media (max-width: 750px) {
+  .navigation_bar .simple_label {
+    font-size: 3vw;
+  }
+}
 .navigation_bar .login_logout_buttons {
-  font-size: 0.8em;
+  font-size: 1.2vw;
   border: none;
-  padding: 0.8em;
+  padding: 0.4em;
   border-radius: 10px;
   color: #073b4c;
   background-color: rgb(153, 189, 200);
   color: #073b4c !important;
   font-weight: 100 !important;
+}
+@media (max-width: 750px) {
+  .navigation_bar .login_logout_buttons {
+    font-size: 4vw;
+  }
 }
 
 body {

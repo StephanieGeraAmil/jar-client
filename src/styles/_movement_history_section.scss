@@ -1,5 +1,4 @@
 .movement_history {
-  // width: $insideContainerSize;
   height: 100%;
   width: 85%;
   overflow: scroll;
@@ -9,29 +8,23 @@
   display: flex;
   flex-direction: column;
   margin-top: 2em;
-  // grid-area: b; 
   ul {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style-type: none;
     li:nth-child(even) .movement {
-      background-color: $even-background-color; // Define this variable or use a fixed color
-     
+      background-color: $even-background-color; 
     }
-  
     li:nth-child(odd) .movement {
-      background-color: $odd-background-color; // Define this variable or use a fixed color
+      background-color: $odd-background-color; 
     }
   }
 }
 
 @media (min-width: 750px) {
   .movement_history {
-
     width: 45%;
     margin-top: 2vw;
-    // align-self: start;
-    // grid-area: b;
   }
 }

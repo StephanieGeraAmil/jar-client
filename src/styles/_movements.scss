@@ -1,21 +1,16 @@
 .movement {
   display: flex;
   padding: 0.2em;
-  // height: 9vw;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  color:  #041f29 !important;
-  // border-radius: $boxRadius;
-  // background-color: $accent-color;
-  // margin-bottom: 2.5vw;
+  color: #041f29 !important;
 
   .movement_column {
     width: 19%;
     font-size: 2.5vw;
     padding: 0.5em;
     font-weight: 300;
-    
   }
   .movement_actions_container {
     display: flex;
@@ -39,7 +34,7 @@
   }
   .movement_column_concept {
     width: 22%;
-font-size: 2.5vw;
+    font-size: 2.5vw;
     padding: 0.5em;
     font-weight: 300;
   }
@@ -47,51 +42,31 @@ font-size: 2.5vw;
 
 @media (min-width: 750px) {
   .movement {
-    padding:0.5em;
-    font-size: 1.5vw;
-    // height: 3vw;
-    // margin-bottom: 1.5vw;
+    padding: 0.1em;
+    // font-size: 1vw;
 
     .movement_column {
       width: 15%;
-      font-size: 1.5vw;
-      // font-size: 1.5vh;
-      // padding: 1vw;
+      font-size: 1vw;
     }
 
     .movement_column_jars {
       width: 60%;
-      font-size: 1.5vw;
-      // font-size: 1.5vh;
-      // padding: 1vw;
+      font-size: 1vw;
       overflow: hidden;
     }
 
     .movement_column_concept {
-      // font-size: 1.5vh;
-      // padding: 1vw;
       overflow: hidden;
-      font-size: 1.5vw;
+      font-size: 1vw;
     }
 
     .movement_actions_container {
       .movement_actions {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
       }
     }
   }
-  @media (min-width: 1000px) {
-    // .movement {
-    //   .movement_column {
-    //     // font-size: 2vh;
-    //   }
-    //   .movement_column_jars {
-    //     // font-size: 2vh;
-    //   }
-    //   .movement_column_concept {
-    //     // font-size: 2vh;
-    //   }
-    // }
-  }
+  
 }

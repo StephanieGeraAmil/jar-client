@@ -25,65 +25,14 @@ export const NavigationBar = () => {
     }, [userOnState]);
     return (
         <div className='navigation_bar'>
-
-            {/* <Link to="/"> */}
-            {/* <div  className=" nav_icon picture div_img" style={{
-                        backgroundImage: `url("/imgs/Dashboard.png")`
-                        }} >
-                        </div> */}
-            {/* </Link> 
-                    <Link to="/distribution"> */}
-            {/* <div  className=" nav_icon picture div_img" style={{
-                        backgroundImage: `url("/imgs/distribution.png")`
-                        }} >
-                        </div> */}
-            {/* </Link> */}
-
-
-
-
-            {/*                   
-                    <div  className=" nav_icon picture div_img" style={{
-                    backgroundImage: `url("/imgs/calendar.png")`
-                    }}>
-                    </div> */}
-
             {!isAuthenticated ? (
                 <Login />
             ) : (
                 <>
                     <label className='simple_label'>{user.email}</label>
-                    {/* <div className=" nav_icon picture div_img" style={{
-                        backgroundImage: `url("/imgs/Dashboard.png")`
-                    }} >
-                    </div>
-                    <div className=" nav_icon picture div_img" style={{
-                        backgroundImage: `url("/imgs/calendar.png")`
-                    }}>
-                    </div> */}
                     <Logout />
                 </>
             )}
-
-            {/*               
-            
-            
-                   
-                    <div  className=" nav_icon picture div_img" style={{
-                    backgroundImage: `url("/imgs/trophy.png")`
-                    }}>
-                    </div>
-                
-            
-            
-                   
-                    <div  className=" nav_icon picture div_img" style={{
-                    backgroundImage: `url("/imgs/user.png")`
-                    }}>
-                    </div> */}
-
-
-
         </div>
     )
 }
