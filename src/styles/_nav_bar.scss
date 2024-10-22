@@ -30,16 +30,13 @@
     }
   }
   .login_logout_buttons {
-    font-size: 1.2vw;
+    font-size: 1vw;
     border: none;
-    padding: 0.4em;
-    border-radius: 10px;
-    color: $base-color;
-    background-color: rgb(153, 189, 200);
-    color: $base-color !important;
-    font-weight: 100 !important;
+    background-color: transparent;
+    color:  rgb(153, 189, 200);
+    font-weight: 300 !important;
     @media (max-width: 750px) {
-      font-size: 4vw;
+      font-size: 3vw;
     }
   }
 }
