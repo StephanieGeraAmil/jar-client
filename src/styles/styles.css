@@ -293,6 +293,12 @@ body {
   transform: scale(1.05);
 }
 
+@media (max-aspect-ratio: 14/9) {
+  .landingPage .topSection {
+    width: 90vw;
+    height: 90vw;
+  }
+}
 @media (max-width: 1000px) {
   .steps {
     grid-template-columns: repeat(3, 1fr) !important;
@@ -382,21 +388,14 @@ body {
     padding: 5vw;
     width: 40%;
   }
-  .landingPage .topSection .final .loginButton {
-    margin-top: 1vh;
-    font-size: 4vw;
-    max-height: 9vw;
-    padding: 5vw;
-    width: 50vw !important;
-  }
   .landingPage .middle {
     flex-direction: column;
   }
-  .landingPage .darktitle {
-    font-size: 9vw;
-  }
   .landingPage .how .howInfo {
     width: 80%;
+  }
+  .landingPage .how .howInfo .darktitle {
+    font-size: 16vw !important;
   }
   .landingPage .how .budgeting {
     margin-top: 3vw;
@@ -406,42 +405,46 @@ body {
   .landingPage .steps {
     display: flex;
     flex-direction: column;
+    padding: 2vh;
   }
   .landingPage .steps .step .title {
-    font-size: 12vw;
+    font-size: 13vw !important;
   }
-  .landingPage .subTitle {
-    font-size: 4vw;
+  .landingPage .steps .subTitle {
+    font-size: 5.5vw !important;
   }
-  .landingPage .paragraph {
-    font-size: 3.5vw;
+  .landingPage .steps .paragraph {
+    font-size: 4vw !important;
   }
   .landingPage .caveats {
     width: 80%;
-    font-size: 3.5vw;
+    font-size: 4vw !important;
+  }
+  .landingPage .caveats .subTitle {
+    font-size: 13vw !important;
   }
   .landingPage .caveats .styledList .listItem {
-    font-size: 3.5vw;
+    font-size: 4vw !important;
   }
   .landingPage .caveats .styledList .listItem .listTitle {
-    font-size: 3.8vw;
+    font-size: 4.5vw !important;
   }
-  .landingPage .patience .listOfThings {
-    padding: 0;
-  }
-  .landingPage .patience .listOfThings .things {
-    width: 40vw;
-    height: 40vw;
-  }
-  .landingPage .patience .patienceInfo {
-    width: 80%;
+  .landingPage .caveats .styledList .listItem .listContent {
+    display: none;
   }
   .landingPage .smallerTitle {
-    font-size: 10vw;
+    font-size: 10vw !important;
+  }
+  .landingPage .final .loginButton {
+    margin-top: 1vh;
+    font-size: 4vw;
+    max-height: 9vw;
+    padding: 5vw;
+    width: 50vw !important;
   }
   .landingPage .final .paragraph {
     width: 80%;
-    font-size: 3.5vw;
+    font-size: 4vw !important;
   }
 }
 .dashboard {

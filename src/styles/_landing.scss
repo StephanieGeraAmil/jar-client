@@ -365,6 +365,14 @@ body {
     }
   }
 }
+@media (max-aspect-ratio: 14/9) {
+  .landingPage {
+    .topSection{
+      width:90vw ;
+     height: 90vw;
+    }
+}
+}
 
 @media (max-width: 1000px) {
   .steps {
@@ -458,7 +466,7 @@ body {
         font-size: 6vw;
         margin-bottom: 1vh;
       }
-      .grayArea{
+      .grayArea {
         padding: 5vw;
       }
 
@@ -466,82 +474,26 @@ body {
         font-size: 4vw !important;
         margin-bottom: 5px;
       }
-      .loginButton{
+      .loginButton {
         margin-top: 1vh;
         font-size: 4vw;
         max-height: 9vw;
         padding: 5vw;
         width: 40%;
-        
-       
       }
-  
-      .final{
-        .loginButton{
-          margin-top: 1vh;
-          font-size: 4vw;
-          max-height: 9vw;
-          padding: 5vw;
-          width: 50vw !important ;
-          
-         
-        }
 
-      }
+     
     }
-    // .topSection {
-    //   width: 100%;
-    //   display: flex;
-    //   flex-direction: column;
-    //   overflow: hidden;
-    //   padding: 0 15px;
-
-    //   .family {
-    //     width: 150vw;
-    //     height: 150vw;
-
-    //     overflow: hidden;
-    //     object-fit: cover;
-    //   }
-
-    //   .blueCircle {
-    //     display: none;
-    //   }
-
-    //   .jar {
-    //     margin-left: 55%;
-    //     margin-top: 38vw;
-    //     width: 40vw;
-    //     height: 50vw;
-    //     z-index: 4;
-    //   }
-
-    //   .landingTopTitle {
-    //     font-size: 22vw;
-    //     line-height: 20vw;
-    //     margin-bottom: 15px;
-    //   }
-
-    //   .landingTopSubTitle {
-    //     font-size: 4vw;
-    //     margin-bottom: 5px;
-    //   }
-
-    //   .landingTopPhrase {
-    //     font-size: 3.5vw;
-    //     margin-bottom: 5px;
-    //   }
-    // }
-
     .middle {
       flex-direction: column;
     }
-    .darktitle {
-      font-size: 9vw;
-    }
+
     .how {
       .howInfo {
         width: 80%;
+        .darktitle {
+          font-size: 16vw !important;
+        }
       }
 
       .budgeting {
@@ -553,54 +505,58 @@ body {
     .steps {
       display: flex;
       flex-direction: column;
+      padding: 2vh;
       .step {
         .title {
-          font-size: 12vw;
+          font-size: 13vw !important;
         }
+      }
+
+      .subTitle {
+        font-size: 5.5vw !important;
+      }
+      .paragraph {
+        font-size: 4vw !important;
       }
     }
 
-    .subTitle {
-      font-size: 4vw;
-    }
-    .paragraph {
-      font-size: 3.5vw;
-    }
     .caveats {
+      .subTitle {
+        font-size: 13vw !important;
+      }
       width: 80%;
-      font-size: 3.5vw;
+      font-size: 4vw !important;
       .styledList {
         .listItem {
-          font-size: 3.5vw;
+          font-size: 4vw !important;
           .listTitle {
-            font-size: 3.8vw;
+            font-size: 4.5vw !important;
           }
+          .listContent
+          {display: none;}
         }
       }
     }
-    .patience {
-      .listOfThings {
-        padding: 0;
-
-        .things {
-          width: 40vw;
-          height: 40vw;
-        }
-      }
-
-      .patienceInfo {
-        width: 80%;
-      }
-    }
-    .smallerTitle {
-      font-size: 10vw;
-    }
-    .final {
     
+    .smallerTitle {
+      font-size: 10vw !important;
+    }
+
+    .final {
+      .loginButton {
+        margin-top: 1vh;
+        font-size: 4vw;
+        max-height: 9vw;
+        padding: 5vw;
+        width: 50vw !important ;
+      }
       .paragraph {
         width: 80%;
-        font-size: 3.5vw;
+        font-size: 4vw !important;
       }
     }
+  
+   
   }
+ 
 }
