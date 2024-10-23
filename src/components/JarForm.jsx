@@ -31,7 +31,6 @@ const JarForm = () => {
         percentage: jarSelected.percentage,
 
         name: jarSelected.name,
-    //    creator:jarSelected.creator?jarSelected.creator:null,
       });
     } 
   }, [jarSelected]);
@@ -65,7 +64,7 @@ const JarForm = () => {
   };
 
   return (
-    <div className="form">
+    <div className="form jar_form">
       {validationMessage != "" && (
         <div className="alert-pop-up">
           <span className="alert">{validationMessage}</span>
@@ -93,25 +92,9 @@ const JarForm = () => {
             }
           />
         </div>
-        {/* {jarSelected == null && (
-          <div className="form-group">
-            <label className="m-2">Percentage: </label>
-            <input
-              type="text"
-              className="form-control"
-              value={jarData.percentage}
-              onChange={(e) =>
-                setJarData({ ...jarData, percentage: e.target.value })
-              }
-            />
-          </div>
-        )} */}
+      
 
         <div className="bottom mt-5">
-          {/* <button   onClick={() =>handleCancel()}>
-                  <RxCrossCircled style={{ color: "darKblue", fontSize: "2.5vh" }} />
-                </button> */}
-          {/* <input className="submitButton cancel" readOnly value="X" onClick={()=>{handleCancel() }}/> */}
           <div
             className="close-alert div_img"
             style={{

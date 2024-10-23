@@ -4,7 +4,7 @@
   // left: 0;
   // width: 100%;
   margin: 0;
-  height: 100%;
+  height:100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,18 +23,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 80%;
+    width: auto;
+    
 
-    margin: auto;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin: 2vw auto;
     display: flex;
+    padding: 1em;
     // flex-direction: column;
     // justify-content: flex-start;
     // align-content: center;
 
     .form-group {
       display: flex;
+      width: auto;
       flex-direction: row;
       justify-content: space-between;
       margin-bottom: 2vw;
@@ -45,9 +46,11 @@
         border-color: $base-color;
         border-width: 0.001vw;
         width: 50%;
+        min-width: 13em;
         font-weight: normal;
         color: $base-color;
-        padding-left: 1.5vw;
+        padding-left:1em;
+        margin-left: 1em;
 
         .dropdown-control {
           width: 50%;
@@ -55,7 +58,7 @@
       }
 
       .checkbox_list {
-        width: 85%;
+        width: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 0;
@@ -73,6 +76,7 @@
     }
     .bottom {
       height: 6vw;
+      width: auto;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -83,7 +87,7 @@
         font-size: 3.6vw;
         font-family: $font;
         font-weight: normal;
-        width: 50%;
+        width: auto;
         // height: 6vw;
 
         border-radius: $boxRadius;
@@ -107,18 +111,25 @@
     }
   }
 }
+.jar_form{
+  height: 30% !important;
+  width: auto;
+
+}
 
 @media (min-width: 750px) {
   .form {
-    height: 100%;
+    height:100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 1em;
     .validation_message {
       margin-left: 10%;
       font-size: 1.5vw;
     }
     form {
+      
       margin-top: 2vw;
       margin-bottom: 2vw;
       display: flex;
@@ -126,6 +137,7 @@
       justify-content: space-between;
       .form-group {
         font-size: 1.5vw;
+        min-width: 15em;
         .form-control {
           padding-left: 0.5vw;
           font-size: 1.2vw;
