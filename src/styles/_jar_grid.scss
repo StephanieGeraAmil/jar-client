@@ -1,23 +1,22 @@
 .jarGrid {
-  height:75%;
+  height: 60vw;
   grid-column: 1;
   grid-row: 3;
   width: $insideContainerSize;
-  margin: 3.5vh auto;
+  margin: 5vh auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 6vw;
   grid-column-gap: 2vw;
   justify-items: center;
   align-items: flex-start;
-
 }
 
 @media (min-width: 750px) {
   .jarGrid {
-    height:75%;
+    height: 75%;
     width: 65%;
-    margin: 2vh auto 4vh;
+    margin: 5vh auto 5vh;
     grid-row-gap: 1vw;
     grid-column-gap: 1vw;
   }

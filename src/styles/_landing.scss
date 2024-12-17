@@ -367,11 +367,11 @@ body {
 }
 @media (max-aspect-ratio: 14/9) {
   .landingPage {
-    .topSection{
-      width:90vw ;
-     height: 90vw;
+    .topSection {
+      width: 90vw;
+      height: 90vw;
     }
-}
+  }
 }
 
 @media (max-width: 1000px) {
@@ -481,8 +481,6 @@ body {
         padding: 5vw;
         width: 40%;
       }
-
-     
     }
     .middle {
       flex-direction: column;
@@ -532,12 +530,13 @@ body {
           .listTitle {
             font-size: 4.5vw !important;
           }
-          .listContent
-          {display: none;}
+          .listContent {
+            display: none;
+          }
         }
       }
     }
-    
+
     .smallerTitle {
       font-size: 10vw !important;
     }
@@ -555,8 +554,5 @@ body {
         font-size: 4vw !important;
       }
     }
-  
-   
   }
- 
 }
